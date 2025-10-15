@@ -1,0 +1,42 @@
+@use "../variables.scss" as *;
+
+.page-header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__menu {
+  display: none;
+}
+
+.page-header__toggler {
+  width: 24px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__toggler-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $color-black;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-black;
+  }
+
+  &::before {
+    transform: translateY(-8px);
+  }
+
+  &::after {
+    transform: translateY(8px);
+  }
+}

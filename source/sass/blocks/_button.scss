@@ -1,0 +1,22 @@
+@use "../variables.scss" as *;
+
+.button {
+  display: block;
+  font-family: $font-accent;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $color-green;
+  border: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  padding: 7px 0;
+}
+
+.button--secondary {
+  color: $color-gray-700;
+  background-color: $color-gray-100;
+}

@@ -1,0 +1,19 @@
+@use "../variables.scss" as *;
+
+.page-footer {
+  padding: 39px 20px 22px 20px;
+
+  background-color: $color-gray-100;
+}
+
+.page-footer__logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 31.5px;
+  text-align: center;
+}
+
+.page-footer__social-list {
+  margin-top: 0;
+  margin-bottom: 22.5px;
+}

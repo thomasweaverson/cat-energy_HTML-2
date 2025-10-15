@@ -1,0 +1,130 @@
+@use "../variables.scss" as *;
+
+.example {
+  background-color: $color-gray-250;
+  padding: 25px 20px 40px 20px;
+}
+
+.example__heading {
+  font-family: $font-accent;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 124px minmax(15px, 1fr) 124px;
+  grid-template-rows: 70px auto;
+}
+
+.example__title {
+  position: relative;
+  z-index: 3;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  justify-self: center;
+  align-self: end;
+  margin-top: 14.5px;
+
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-align: center;
+
+  background-color: $color-gray-250;
+  width: min-content;
+
+  &:nth-of-type(2) {
+    grid-column: 3 / 4;
+  }
+}
+
+.example__definition {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  grid-column: 1 / 2;
+  justify-self: center;
+  grid-row: 1 / 2;
+  width: 100%;
+
+  padding-top: 13.5px;
+  padding-bottom: 16.5px;
+  margin-bottom: 14px;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+
+  border: 1px solid $color-gray-400;
+  border-radius: 3px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 71%;
+    height: 3px;
+    background-color: $color-gray-250;
+    z-index: 2;
+  }
+
+  &:nth-of-type(2) {
+    grid-column: 3 / 4;
+  }
+}
+
+.example__spending {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.example__title--spending {
+  margin: 0;
+  font-family: $font-accent;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: unset;
+  display: inline;
+  color: $color-black;
+}
+
+.example__definition--spending {
+  display: inline;
+  font-family: $font-accent;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+
+  &::after {
+    display: none;
+  }
+}

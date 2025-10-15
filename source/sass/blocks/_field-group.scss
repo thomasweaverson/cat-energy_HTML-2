@@ -1,0 +1,19 @@
+@use "../variables.scss" as *;
+
+.field-group {
+  padding: 20px 0;
+  border: none;
+}
+
+.field-group__heading {
+  font-family: $font-accent;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.field-group__list {
+  padding: 0;
+
+  list-style: none;
+}

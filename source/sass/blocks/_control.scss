@@ -1,0 +1,11 @@
+@use "../variables.scss" as *;
+
+.control {
+  color: $color-gray-800;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}

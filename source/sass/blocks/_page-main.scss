@@ -1,0 +1,26 @@
+@use "../variables.scss" as *;
+
+.page-main__section {
+  margin-bottom: 20px;
+}
+
+.page-main__heading {
+  font-family: $font-accent;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+  color: $color-black;
+
+  margin: 0;
+  padding: 27px 20px 40px 20px;
+
+  border-top: 1px solid $color-gray-200;
+  border-bottom: 1px solid $color-gray-200;
+  margin-bottom: 8.5px;
+}
+
+.page-main__description {
+  font-family: $font-accent;
+  color: $color-black;
+  padding: 0 20px;
+}

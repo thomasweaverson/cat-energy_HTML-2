@@ -1,0 +1,35 @@
+@use "../variables.scss" as *;
+
+.promo {
+  background-color: $color-green;
+  background-image: url("../../img/background/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: $color-white;
+
+  padding-top: 27px;
+  margin-bottom: 20px;
+}
+
+.promo__heading {
+  font-family: $font-accent;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.promo__motto {
+  font-family: $font-accent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 29px;
+}

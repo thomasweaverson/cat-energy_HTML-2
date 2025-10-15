@@ -1,0 +1,31 @@
+@use "../variables.scss" as *;
+
+.location__wrapper {
+  display: flex;
+  gap: 2px;
+
+  margin: 26px 20px;
+}
+
+.location__invite {
+  margin: 0;
+  flex: 1 1 0%;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.location__address {
+  flex: 1 1 0%;
+
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.location__map-dummy {
+  display: block;
+}

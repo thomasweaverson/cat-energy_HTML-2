@@ -1,0 +1,19 @@
+@use "../variables.scss" as *;
+
+.page {
+  font-family: $font-body;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-gray-700;
+  background-color: $color-white;
+}
+
+.page__body {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.page__header {
+  margin: 0 20px;
+  position: relative;
+}
