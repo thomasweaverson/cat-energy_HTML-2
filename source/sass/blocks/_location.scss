@@ -1,10 +1,33 @@
-@use "../variables.scss" as *;
+@use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
-.location__wrapper {
+.location__container {
+  @include container;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.location__content {
   display: flex;
   gap: 2px;
 
-  margin: 26px 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding: 56px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    background-color: $color-white;
+    width: 565px;
+    padding: 57px 80px;
+  }
 }
 
 .location__invite {
@@ -16,6 +39,11 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .location__address {
@@ -24,8 +52,38 @@
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
+  text-align: right;
+}
+
+.location__street {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 19px;
+  }
+}
+
+.location__city {
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .location__map-dummy {
   display: block;
+  margin: 0 auto;
+}
+
+.location--catalog {
+  background-color: $color-gray-100;
+}
+
+.location--form {
+  background-color: $color-gray-100;
 }

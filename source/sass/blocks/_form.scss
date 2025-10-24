@@ -1,7 +1,12 @@
-.form {
-  padding: 20px;
-}
+@use "../utils/variables.scss" as *;
 
-.form__section {
-  margin: 0;
+.form__fieldset-group {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 80px;
+
+    .field-group {
+      flex: 1;
+    }
+  }
 }

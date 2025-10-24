@@ -1,6 +1,27 @@
+@use "../utils/variables.scss" as *;
+
+.logo {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.logo__image {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
+
 .logo__sign {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    transform: none;
+    margin-top: 19px;
+  }
 }

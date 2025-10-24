@@ -1,3 +1,52 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
+
 .products {
-  padding: 20px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 68px;
+  }
+}
+
+.products__container {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    max-width: $tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.products__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px 63px;
+  }
+}
+
+.products__card {
+  @media (min-width: $tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }

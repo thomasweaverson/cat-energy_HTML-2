@@ -1,9 +1,27 @@
-@use "../variables.scss" as *;
+@use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
-.page-footer {
-  padding: 39px 20px 22px 20px;
 
+.page-footer__wrapper {
   background-color: $color-gray-100;
+}
+
+.page-footer__container {
+  @include container;
+}
+
+.page-footer__layout {
+  padding: 39px 0 22px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 0 52px 0;
+    display: grid;
+    grid-template-columns: 165px 1fr 165px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 0 55px 0;
+  }
 }
 
 .page-footer__logo {
@@ -11,9 +29,30 @@
   margin: 0 auto;
   margin-bottom: 31.5px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    align-self: center;
+
+    text-align: left;
+  }
 }
 
 .page-footer__social-list {
   margin-top: 0;
   margin-bottom: 22.5px;
+  border-top: 1px solid $color-gray-400;
+  border-bottom: 1px solid $color-gray-400;
+  padding: 11px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
 }

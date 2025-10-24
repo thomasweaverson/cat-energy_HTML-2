@@ -1,12 +1,38 @@
-@use "../variables.scss" as *;
+@use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+.page-header {
+  outline: 1px solid #aabb00;
+  outline-offset: -1px;
+}
+
+.page-header__container {
+  @include container;
+}
 
 .page-header__nav {
   display: flex;
   justify-content: space-between;
+
+  // height: 38px;
+
+  @media (min-width: $tablet-width) {
+    // height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // height: 59px;
+  }
 }
 
 .page-header__menu {
   display: none;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 35px;
+  }
 }
 
 .page-header__toggler {
@@ -15,9 +41,17 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  padding: 0;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__toggler-line {
+  //! сделать через shadow
   display: block;
   width: 24px;
   height: 2px;
@@ -33,10 +67,44 @@
   }
 
   &::before {
-    transform: translateY(-8px);
+    transform: translateY(-8.5px);
   }
 
   &::after {
-    transform: translateY(8px);
+    transform: translateY(6.5px);
+  }
+}
+
+.page-header__background {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 302px;
+  background-image: url("../../img/background/promo.jpg"), linear-gradient(to right, #65a646, #63a443);
+  background-repeat: no-repeat, no-repeat;
+
+  background-position: top center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    background-image: linear-gradient(to right, #68b738d9, #68b738d9), url("../../img/background/cat-large.jpg");
+
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, auto;
+    background-position: center, left top;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 50%;
+    max-width: 1044px;
+    height: 694px;
   }
 }

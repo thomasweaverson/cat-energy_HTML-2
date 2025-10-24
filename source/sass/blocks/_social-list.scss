@@ -1,15 +1,16 @@
-@use "../variables.scss" as *;
+@use "../utils/variables.scss" as *;
 
 .social-list {
-  border-top: 1px solid $color-gray-300;
-  border-bottom: 1px solid $color-gray-300;
-  padding: 11px 0;
   display: flex;
   justify-items: center;
   justify-content: center;
   gap: 5px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .social-list__link {

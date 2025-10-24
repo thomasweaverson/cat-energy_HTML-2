@@ -1,0 +1,39 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+.products-additional__container {
+  @include container;
+
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.products-additional__layout {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 79px;
+  }
+}
+
+.products-additional__heading {
+  font-family: $font-accent;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin-bottom: 36px;
+}
+
+.products-additional__list {
+  list-style: none;
+  padding-left: 0;
+}
+

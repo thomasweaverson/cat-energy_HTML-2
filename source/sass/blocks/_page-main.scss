@@ -1,26 +1,114 @@
-@use "../variables.scss" as *;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
-.page-main__section {
-  margin-bottom: 20px;
-}
-
-.page-main__heading {
+.page-main__header {
   font-family: $font-accent;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
   color: $color-black;
+  padding-top: 27px;
+  padding-bottom: 20px;
 
-  margin: 0;
-  padding: 27px 20px 40px 20px;
+  // outline: 1px solid #aa0000;
+  // outline-offset: -1px;
 
-  border-top: 1px solid $color-gray-200;
-  border-bottom: 1px solid $color-gray-200;
-  margin-bottom: 8.5px;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 0;
+    // height: 810px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // height: 553px;
+    padding-top: 82px;
+    margin-bottom: 82px;
+  }
 }
 
-.page-main__description {
+.page-main__header--catalog {
+  padding: 0;
+  height: auto;
+
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 82px;
+  }
+  // @media (min-width: $tablet-width) {
+  //   position: static;
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  //   margin-bottom: 82px;
+  //   height: auto;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   padding-top: 10px;
+  //   margin-bottom: 84px;
+  //   height: auto;
+  // }
+}
+
+.page-main__header-wrapper {
+  border-top: 1px solid $color-gray-400;
+  border-bottom: 1px solid $color-gray-400;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.page-main__header-wrapper--form {
+  border-bottom: none;
+}
+
+.page-main__header-container {
+  @include container;
+  font-family: $font-accent;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.page-main__header-container--form {
+  padding-bottom: 0;
+}
+
+.page-main__title {
+  font-size: 36px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+.page-main__title--form {
+  margin-bottom: 37px;
+}
+
+.page-main__header--form {
+  padding: 0;
+  height: auto;
+
+  margin-bottom: 39px;
+}
+
+.page-main__subtitle {
   font-family: $font-accent;
   color: $color-black;
-  padding: 0 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page-main__footer {
+  outline: 1px solid #aa0000;
+  outline-offset: -1px;
 }
