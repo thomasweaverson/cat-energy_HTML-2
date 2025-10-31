@@ -1,37 +1,46 @@
 @use "../utils/variables.scss" as *;
-@use "../utils/mixins.scss" as *;
+// @use "../utils/mixins.scss" as *;
+
 
 .how-it-works {
   margin-bottom: 49px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 43px;
     border-bottom: 1px solid $color-gray-300;
+    width: 92.19%;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 26px;
     border-bottom: none;
+    width: 84.72%;
   }
 }
 
-.how-it-works__container {
-  @include container;
-}
-
-.how-it-works__heading {
+.how-it-works__title {
   font-family: $font-accent;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .how-it-works__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: step;
 
   display: flex;
   flex-direction: column;
@@ -40,12 +49,19 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 37px 133px;
+  }
+
+  @media (min-width: $tablet-plus-width) {
+    flex-wrap: nowrap;
     gap: 0;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 75px;
+    gap: 73.33px;
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 
@@ -53,6 +69,8 @@
   padding-left: 80px;
   min-height: 60px;
   position: relative;
+
+  counter-increment: step;
 
   outline: 1px solid #aa00aa;
   outline-offset: -1px;
@@ -69,14 +87,23 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 265px;
-    margin-bottom: 37px;
+    width: 250px;
+    // margin-bottom: 37px;
     padding-top: 40px;
     padding-bottom: 57px;
     padding-left: 0;
 
-    &:nth-child(2n-1) {
-      margin-right: 119px;
+    font-size: 16px;
+    line-height: 24px;
+
+    // &:nth-child(2n-1) {
+    //   margin-right: 133px;
+    // }
+
+    &:nth-child(1) {
+      &::after {
+        right: 25px;
+      }
     }
 
     &::before {
@@ -84,6 +111,22 @@
       margin-bottom: 31px;
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      content: counter(step);
+      position: absolute;
+      top: 40px;
+      right: 4px;
+
+      font-family: $font-accent;
+      font-size: 280px;
+      line-height: 280px;
+      color: $color-gray-100;
+
+      z-index: -1;
+      transform: translateY(-40px);
+      pointer-events: none;
     }
   }
 
@@ -126,5 +169,13 @@
     background-image: url("../../img/decorations/scales.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }

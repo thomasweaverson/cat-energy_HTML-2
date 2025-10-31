@@ -9,3 +9,58 @@
   line-height: 18px;
   text-transform: uppercase;
 }
+
+.control__input {
+  display: none;
+}
+
+.control__input:checked + .control__name::after {
+  content: "";
+  position: absolute;
+
+  left: 8px;
+  top: 8px;
+
+  width: 13.5px;
+  height: 13.5px;
+  background: $color-green;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 11px;
+  }
+}
+
+.control__name {
+  padding-left: 45px;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-gray-500;
+    border-radius: 50%;
+    background: #ffffff;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

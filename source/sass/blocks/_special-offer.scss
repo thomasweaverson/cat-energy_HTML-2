@@ -1,13 +1,40 @@
 @use "../utils/variables.scss" as *;
 
 .special-offer {
-  padding: 40px;
+  padding: 187px 0 43px 0;
 
   color: $color-white;
   background-color: $color-green;
-  background-image: url("../img/background/catbag.jpg");
+  background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag.jpg");
 
   font-size: 16px;
   text-align: center;
   line-height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center 58px, center center;
+  background-size: auto, cover;
+
+  @media (min-width: $tablet-width) {
+    padding: 71px 0 69px 422px;
+
+    background-position: 77px 57px, center center;
+    background-size: 80px 82.5px, cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 184px 0 43px 0;
+  }
+}
+
+.special-offer__promo {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }

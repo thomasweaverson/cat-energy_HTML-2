@@ -1,20 +1,60 @@
 @use "./variables" as *;
 
-@mixin container {
-  max-width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+// @mixin container {
+//   width: 100%;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+//   @media (min-width: $tablet-width) {
+//     max-width: $tablet-width;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
 
-  @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding-left: 110px;
-    padding-right: 110px;
+//   @media (min-width: $desktop-width) {
+//     max-width: $desktop-width;
+//     padding-left: 110px;
+//     padding-right: 110px;
+//   }
+// }
+
+@mixin title-with-line(
+  $font-size,
+  $line-height,
+  $margin-bottom,
+  $margin-left,
+  $padding-left,
+  $padding-right,
+  $line-top,
+  $line-color: $color-green,
+  $line-width: 200vw,
+  $font-family: $font-accent,
+  $font-weight: 400,
+  $bg-color: $color-white
+) {
+  position: relative;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: 0 auto $margin-bottom $margin-left;
+  width: fit-content;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  background-color: $bg-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: $line-width;
+    top: $line-top;
+    height: 2px;
+    background-color: $line-color;
+
+    @if $margin-left != 0 {
+      left: -50%;
+    }
   }
 }

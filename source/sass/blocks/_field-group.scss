@@ -1,19 +1,69 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .field-group {
-  padding: 20px 0;
   border: none;
 }
 
+.field-group--goal {
+  border-top: 1px solid $color-gray-400;
+  border-bottom: 1px solid $color-gray-400;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $color-gray-400;
+  }
+}
+
 .field-group__heading {
-  font-family: $font-accent;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 26px;
+  @include title-with-line(
+    24px,
+    26px,
+    35px,
+    0,
+    6.25vw,
+    14px,
+    16px
+  );
+
+  @media (min-width: $tablet-width) {
+    br {
+      display: none;
+    }
+
+    @include title-with-line(
+    36px,
+    36px,
+    76px,
+    3.91vw,
+    5.19vw,
+    40px,
+    23px
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title-with-line(
+    36px,
+    36px,
+    76px,
+    4.86vw,
+    2.78vw,
+    40px,
+    23px
+    );
+  }
 }
 
 .field-group__list {
   padding: 0;
-
+  margin: 0;
   list-style: none;
+}
+
+.field-group__item--goal {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
 }

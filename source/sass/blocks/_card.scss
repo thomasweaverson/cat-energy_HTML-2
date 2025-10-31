@@ -1,13 +1,117 @@
 @use "../utils/variables.scss" as *;
 
+.card {
+
+  padding: 11px 6.25% 25px 6.25%;
+  border-bottom: 1px solid $color-gray-200;
+  display: grid;
+  grid-template-columns: 140fr 76fr 64fr;
+  grid-template-areas:
+    "image title ."
+    "image specification specification"
+    "order-button order-button order-button";
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 36px 39px 36px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 234px repeat(3, auto);
+    grid-template-areas:
+      "image"
+      "title"
+      "specification"
+      "order-button";
+
+    border-bottom: none;
+
+    background: linear-gradient(to bottom, transparent 81px, $color-gray-100 81px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 1px 38px 40px 38px;
+
+    grid-template-rows: 242px repeat(3, auto);
+  }
+}
+
+.card__image {
+  grid-area: image;
+  align-self: center;
+  justify-self: center;
+}
+
 .card__heading {
+
+  grid-area: title;
+
   font-family: $font-accent;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+
+  text-transform: uppercase;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 23px;
+    margin-bottom: 24px;
+  }
 }
 
 .card__params {
+  grid-area: specification;
   color: $color-gray-700;
   font-size: 12px;
+  line-height: 16px;
+
+  margin-top: 18px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 28px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.card__param {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $color-gray-500;
+  }
+}
+
+.card__button {
+  grid-area: order-button;
+
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+.card__break-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.card__break-wide {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

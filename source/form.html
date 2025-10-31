@@ -11,40 +11,36 @@
 
   <body class="page__body">
     <header class="page__header page-header">
-      <div class="page-header__container">
-        <nav class="page-header__nav">
-          <a class="page-header__logo logo">
-            <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
-            <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
-          </a>
+      <nav class="page-header__nav">
+        <a class="page-header__logo logo">
+          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+          <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
+        </a>
 
-          <button class="page-header__toggler" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="page-header__toggler-line"></span>
-          </button>
+        <button class="page-header__toggler page-header__toggler--nojs" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="page-header__toggler-line"></span>
+        </button>
 
-          <ul class="page-header__menu site-menu">
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Главная</a>
-            </li>
-            <li class="site-menu__item">
-              <a href="./catalog.html" class="site-menu__link">Каталог продукции</a>
-            </li>
-            <li class="site-menu__item">
-              <a href="./form.html" class="site-menu__link site-menu__item--current">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="page-header__menu page-header__menu--nojs site-menu">
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="./index.html">Главная</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-menu__item site-menu__item--current">
+            <a class="site-menu__link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="page__main page-main">
       <header class="page-main__header page-main__header--form">
         <div class="page-main__header-wrapper page-main__header-wrapper--form">
-          <div class="page-main__header-container page-main__header-container--form">
-            <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
-            <p class="page-main__subtitle">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
-          </div>
+          <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
+          <p class="page-main__subtitle">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         </div>
       </header>
 
@@ -53,19 +49,19 @@
 
         <form class="form__body" method="post" action="https://echo.htmlacademy.ru">
           <div class="form__fieldset-group">
-            <fieldset class="form__section field-group">
+            <fieldset class="form__section form__section--info field-group field-group--info">
               <legend class="visually-hidden">Информация о коте</legend>
 
               <ul class="field-group__list">
                 <li class="field-group__item">
-                  <label class="field">
+                  <label class="field field--cat-name">
                     <span class="field__name">Имя:*</span>
                     <input class="field__input" name="cat-name" type="text" placeholder="Барсик" required>
                   </label>
                 </li>
 
                 <li class="field-group__item">
-                  <label class="field">
+                  <label class="field field--cat-weight">
                     <span class="field__name">
                       Вес (кг):*
                     </span>
@@ -74,7 +70,7 @@
                 </li>
 
                 <li class="field-group__item">
-                  <label class="field">
+                  <label class="field field--cat-age">
                     <span class="field__name">Возраст (лет):</span>
                     <input class="field__input" name="cat-age" type="text" placeholder="7">
                   </label>
@@ -83,23 +79,23 @@
 
             </fieldset>
 
-            <fieldset class="form__section field-group">
+            <fieldset class="form__section form__section--goal field-group field-group--goal">
               <legend class="visually-hidden">Цель программы</legend>
 
               <ul class="field-group__list">
-                <li class="field-group__item">
+                <li class="field-group__item field-group__item--goal">
                   <label class="control control--radio">
                     <input class="control__input" name="goal" type="radio" value="fit">
                     <span class="control__name">Похудение</span>
                   </label>
                 </li>
-                <li class="field-group__item">
+                <li class="field-group__item field-group__item--goal">
                   <label class="control control--radio">
                     <input class="control__input" name="goal" type="radio" value="fitness">
                     <span class="control__name">Набор массы</span>
                   </label>
                 </li>
-                <li class="field-group__item">
+                <li class="field-group__item field-group__item--goal">
                   <label class="control control--radio">
                     <input class="control__input" name="goal" type="radio" value="advice">
                     <span class="control__name">Не знаю (нужен ваш совет)</span>
@@ -110,7 +106,7 @@
           </div>
 
           <fieldset class="form__section field-group">
-            <legend class="field-group__heading">Контактные данные (владельца кота)</legend>
+            <legend class="field-group__heading">Контактные данные<br> (владельца кота)</legend>
 
             <ul class="field-group__list">
               <li class="field-group__item">
@@ -175,72 +171,87 @@
           </div>
         </form>
       </section>
-
-      <footer class="page-main__footer location location--form">
-        <div class="location__container">
-          <h2 class="visually-hidden">Местоположение</h2>
-          <div class="location__content">
-            <p class="location__invite">
-              приглашаем<br>
-              к сотрудничеству<br>
-              дилеров!
-            </p>
-            <address class="location__address">
-              <span class="location__street">
-                ул. Большая<br>
-                Конюшенная, д. 19/8</span><br>
-              <span class="location__city">Санкт-Петербург</span>
-            </address>
-          </div>
-        </div>
-        <div class="location__map">
-          <picture>
-            <!-- для больших экранов -->
-            <source media="(min-width: 1440px)" srcset="img/map-big.jpg">
-            <!-- для планшетов -->
-            <source media="(min-width: 768px)" srcset="img/map-medium.jpg">
-            <!-- для мобильных -->
-            <img class="location__map-dummy" src="./img/map-small.jpg" alt="Карта к нашему офису">
-          </picture>
-        </div>
-      </footer>
     </main>
-    <footer class="page__footer page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__container">
-          <div class="page-footer__layout">
-            <a class="page-footer__logo">
-              <img class="logo__image" src="./img/logo-sign.svg" width="128" height="24" alt="Cat Energy">
-            </a>
 
-            <ul class="page-footer__social-list social-list">
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
-                  <span class="visually-hidden">Мы Вконтакте</span>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">
-                  <span class="visually-hidden">Мы в instagram</span>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">
-                  <span class="visually-hidden">Мы в facebook</span>
-                </a>
-              </li>
-            </ul>
-
-            <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="visually-hidden">Разработано в</span>
-              <span class="copyright__text">HTML Academy</span>
-              <img class="copyright__image" src="./img/htmlacademy.svg" width="27" height="34" alt=""
-                aria-hidden="true">
-            </a>
-          </div>
+    <section class="page__location location location--form">
+      <div class="location__container">
+        <h2 class="visually-hidden">Местоположение</h2>
+        <div class="location__content">
+          <p class="location__invite">
+            приглашаем<br>
+            к сотрудничеству<br>
+            дилеров!
+          </p>
+          <address class="location__address">
+            <span class="location__street">
+              ул. Большая<br>
+              Конюшенная, д. 19/8</span><br>
+            <span class="location__city">Санкт-Петербург</span>
+          </address>
         </div>
       </div>
+      <iframe class="location__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
+    </section>
+
+    <footer class="page__footer page-footer">
+      <div class="page-footer__layout">
+        <a class="page-footer__logo">
+          <img class="logo__image" src="./img/logo-sign.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+
+        <ul class="page-footer__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы Вконтакте</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в instagram</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в facebook</span>
+            </a>
+          </li>
+        </ul>
+
+        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">Разработано в</span>
+          <span class="copyright__text">HTML Academy</span>
+          <img class="copyright__image" src="./img/htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
+        </a>
+      </div>
     </footer>
+
+    <script>
+      document.querySelectorAll('*').forEach(el => {
+        [...el.classList].filter(cls => cls.endsWith('--nojs')).forEach(cls => el.classList.remove(cls));
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggler = document.querySelector('.page-header__toggler');
+        const menu = document.querySelector('.page-header__menu');
+
+        if (!toggler || !menu) return;
+        toggler.classList.add('page-header__toggler--closed');
+        toggler.addEventListener('click', function () {
+          const isClosed = toggler.classList.contains('page-header__toggler--closed');
+
+          if (isClosed) {
+            toggler.classList.remove('page-header__toggler--closed');
+            toggler.classList.add('page-header__toggler--opened');
+            menu.classList.add('page-header__menu--shown');
+          } else {
+            toggler.classList.remove('page-header__toggler--opened');
+            toggler.classList.add('page-header__toggler--closed');
+            menu.classList.remove('page-header__menu--shown');
+          }
+        });
+      });
+    </script>
   </body>
 
 </html>

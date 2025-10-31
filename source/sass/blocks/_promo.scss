@@ -1,16 +1,19 @@
 @use "../utils/variables.scss" as *;
-@use "../utils/mixins.scss" as *;
+// @use "../utils/mixins.scss" as *;
 
 .promo {
 
   color: $color-white;
 }
 
-.promo__container {
-  @include container;
+.promo__layout {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 117fr 420px 231fr;
+  }
 
   @media (min-width: $desktop-width) {
-    position: relative;
+    grid-template-columns: 190fr 368px 552px 330fr;
   }
 }
 
@@ -29,13 +32,16 @@
     font-size: 60px;
     text-align: left;
 
-    margin-left: 89px;
-    margin-bottom: 41px;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 80px;
-    margin-bottom: 40px;
+    margin-top: 82px;
+    margin-bottom: 41px;
+
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
   }
 }
 
@@ -53,13 +59,13 @@
   @media (min-width: $tablet-width) {
     color: $color-black;
     text-align: left;
-    margin-left: 89px;
-    margin-bottom: 49px;
+    margin-bottom: 20px;
     font-size: 20px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 80px;
     margin-bottom: 52px;
   }
 }
@@ -70,41 +76,38 @@
   margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
     width: 709px;
     height: 609px;
-    margin-bottom: 0;
-    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    bottom: 0;
-    left: 558px;
-    right: unset;
-    top: -82px;
+    grid-row: 1 / 4;
     margin-top: 0;
     width: 552px;
     height: 499px;
+    grid-column: 3 / 4;
   }
 }
 
 .promo__button {
   display: block;
-  width: 280px;
+  width: 87.5%;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
+    height: 54px;
     width: 244px;
     margin: 0;
-    margin-left: 89px;
+
+    margin-top: 29px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 80px;
+    margin-top: 0;
+    margin-bottom: 185px;
   }
 }

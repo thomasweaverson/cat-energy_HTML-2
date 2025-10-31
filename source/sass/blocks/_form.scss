@@ -1,12 +1,44 @@
 @use "../utils/variables.scss" as *;
 
 .form__fieldset-group {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    gap: 80px;
+  margin: 0 6.25% 26px 6.25%;
 
-    .field-group {
-      flex: 1;
-    }
+  @media (min-width: $tablet-width) {
+    margin: 0 9.11% 75px 9.11%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 7.71% 69px 7.71%;
+
+    display: grid;
+    grid-template-columns: 570fr 569fr;
+    gap: 81px;
+  }
+}
+
+.form__section {
+  margin: 0;
+  padding: 0;
+}
+
+.form__section--info {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.form__section--goal {
+  margin-inline: -6.25vw;
+  padding: 22px 6.25vw 19px 6.25vw;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 0;
+    padding: 24px 27px;
   }
 }

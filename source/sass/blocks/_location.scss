@@ -1,11 +1,22 @@
 @use "../utils/variables.scss" as *;
-@use "../utils/mixins.scss" as *;
+// @use "../utils/mixins.scss" as *;
 
-.location__container {
-  @include container;
+.location {
+  position: relative;
 
   @media (min-width: $desktop-width) {
-    position: relative;
+    height: 400px;
+  }
+}
+
+.location__container {
+  position: relative;
+
+  width: 87.5%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 92.19%;
   }
 }
 
@@ -18,12 +29,13 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-    padding: 56px 40px;
+    padding: 56px 0;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 95px;
+    left: 7.64%;
     background-color: $color-white;
     width: 565px;
     padding: 57px 80px;
@@ -75,9 +87,23 @@
   }
 }
 
-.location__map-dummy {
+// .location__map-dummy {
+//   display: block;
+//   margin: 0 auto;
+// }
+
+.location__map {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: 362px;
+
+  border: none;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .location--catalog {

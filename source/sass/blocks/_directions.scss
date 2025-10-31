@@ -1,5 +1,5 @@
 @use "../utils/variables.scss" as *;
-@use "../utils/mixins.scss" as *;
+// @use "../utils/mixins.scss" as *;
 
 .directions {
   margin-bottom: 20px;
@@ -13,20 +13,82 @@
   }
 }
 
-.directions__container {
-  @include container;
-}
-
 .directions__layout {
   @media (min-width: $desktop-width) {
     display: flex;
-    gap: 80px;
+    gap: 6.56%;
+    width: 84.72%;
+    margin: 0 auto;
   }
 }
 
 .directions__item {
   background-color: $color-gray-100;
   padding: 30px 20px 18px 20px;
+  position: relative;
+  width: 87.5%;
+  margin: 0 auto;
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 29px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../../img/icons/cat-slim-back.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: unset;
+      right: 62px;
+      background-size: contain;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+      right: unset;
+    }
+  }
+
+  &--pro::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../../img/icons/cat-pro-back.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 100%;
+      top: 0;
+      right: 28px;
+      left: unset;
+      background-size: contain;
+      transform: translateY(10px);
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+      right: unset;
+      transform: translateY(0);
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -34,6 +96,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 77px 32px 47px 32px;
+    width: 92.19%;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,12 +111,13 @@
   }
 }
 
-.directions__heading {
+.directions__title {
   font-family: $font-accent;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 29px;
   padding: 0;
   padding-left: 91px;
   text-transform: uppercase;
@@ -67,7 +131,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 182px;
-    margin-bottom: 73px;
+    margin-bottom: 74px;
   }
 }
 
@@ -86,7 +150,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 360px;
+    margin-right: 304px;
     font-family: "Arial", "Helvetica", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -101,12 +165,13 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin-bottom: 13px;
+    margin-bottom: 22px;
   }
 }
 
 .directions__link {
   display: block;
+  position: relative;
   color: $color-black;
   font-family: $font-accent;
   font-size: 16px;
@@ -114,6 +179,47 @@
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
+  width: fit-content;
+
+  outline: 1px solid #aa00aa;
+  outline-offset: -1px;
+
+  padding-left: 10px;
+  margin-left: -10px;
+  padding-right: 47px;
+  padding-top: 10px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 0;
+
+    display: block;
+    width: 32px;
+    height: 12px;
+    // outline: 1px solid #aa00aa;
+    background-image: url("../../img/icons/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: -8px;
+
+    @media (min-width: $tablet-width) {
+      top: 23.5px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-position: 0;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -121,7 +227,11 @@
     padding-top: 20px;
     padding-right: 57px;
     padding-bottom: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
     width: fit-content;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8px;
   }
 }

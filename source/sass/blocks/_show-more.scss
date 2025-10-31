@@ -1,11 +1,73 @@
 @use "../utils/variables.scss" as *;
 
+.show-more {
+  padding-block: 17px 25px;
+
+  // background-image: url("../../img/icons/plus-show-more.svg");
+  // background-repeat: no-repeat;
+  // background-position: center 17px;
+
+  border-bottom: 1px solid $color-gray-200;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 36px 36px 36px;
+    width: 324px;
+    margin-top: 82px;
+    border: 2px solid $color-gray-100;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding-top: 49px;
+    padding-bottom: 39px;
+  }
+}
+
+.show-more__plus {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 23px auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #d3d3d3;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 50px;
+  }
+}
+
 .show-more__heading {
   font-family: $font-accent;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 8px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+  }
 }
 
 .show-more__description {
@@ -13,4 +75,41 @@
 
   font-size: 12px;
   line-height: 16px;
+
+  text-align: center;
+
+  margin: 0 0 21px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 87px;
+  }
+}
+
+.show-more__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 0;
+
+    position: static;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.show-more__break-wide {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

@@ -8,6 +8,35 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.field--cat-name,
+.field--cat-weight,
+.field--cat-age {
+  display: flex;
+
+  &:not(.field--cat-age) {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .field__name {
+    margin-right: 12px;
+    align-self: center;
+  }
+
+  & .field__input {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .field__input {
@@ -15,4 +44,17 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  border: 1px solid #e7e7e7;
+  padding: 9.5px 13px;
+
+  &::placeholder {
+    color: $color-gray-700;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 13px;
+  }
 }
