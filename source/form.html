@@ -106,17 +106,19 @@
           </div>
 
           <fieldset class="form__section field-group">
-            <legend class="field-group__heading">Контактные данные<br> (владельца кота)</legend>
+            <div class="field-group__heading-wrapper">
+              <legend class="field-group__heading">Контактные данные<br> (владельца кота)</legend>
+            </div>
 
-            <ul class="field-group__list">
-              <li class="field-group__item">
-                <label class="field">
+            <ul class="field-group__list field-group__list--contact">
+              <li class="field-group__item field-group__item--contact">
+                <label class="field field--e-mail">
                   <span class="field__name">E-mail:*</span>
                   <input class="field__input" name="e-mail" type="email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
-              <li class="field-group__item">
-                <label class="field">
+              <li class="field-group__item field-group__item--contact">
+                <label class="field field--phone">
                   <span class="field__name">Телефон:*</span>
                   <input class="field__input" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
                 </label>
@@ -124,39 +126,43 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__section comment-section">
-            <legend class="visually-hidden">Комментарий</legend>
+          <fieldset class="form__section field-group">
+            <div class="field-group__heading-wrapper">
+              <legend class="field-group__heading">Комментарий</legend>
+            </div>
 
-            <label class="comment-section__label">
-              <span class="comment-section__name">Комментарий:</span>
-              <textarea class="comment-section__textarea" name="comment" rows="5"
+            <label class="field field--comment">
+              <span class="field__name visually-hidden">Комментарий:</span>
+              <textarea class="field__textarea" name="comment" rows="5"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
 
-          <fieldset class="form__section field-group">
-            <legend class="visually-hidden">Дополнительно</legend>
+          <fieldset class="form__section field-group field-group--additional">
+            <div class="field-group__heading-wrapper">
+              <legend class="field-group__heading">Дополнительно</legend>
+            </div>
 
-            <ul class="field-group__list">
-              <li class="field-group__item">
+            <ul class="field-group__list field-group__list--additional">
+              <li class="field-group__item field-group__item--additional">
                 <label class="control control--checkbox">
                   <input class="control__input" name="additional" type="checkbox" value="sweetener" checked>
                   <span class="control__name">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="field-group__item">
+              <li class="field-group__item field-group__item--additional">
                 <label class="control control--checkbox">
                   <input class="control__input" name="additional" type="checkbox" value="water">
                   <span class="control__name">Питьевая вода</span>
                 </label>
               </li>
-              <li class="field-group__item">
+              <li class="field-group__item field-group__item--additional">
                 <label class="control control--checkbox">
                   <input class="control__input" name="additional" type="checkbox" value="milk">
                   <span class="control__name">Молоко</span>
                 </label>
               </li>
-              <li class="field-group__item">
+              <li class="field-group__item field-group__item--additional">
                 <label class="control control--checkbox">
                   <input class="control__input" name="additional" type="checkbox" value="vitamins">
                   <span class="control__name">Витамины</span>

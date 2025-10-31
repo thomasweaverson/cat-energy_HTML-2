@@ -39,6 +39,34 @@
   }
 }
 
+.field--e-mail,
+.field--phone {
+  display: flex;
+
+  & .field__name {
+    margin-right: 9px;
+    align-self: center;
+  }
+
+  & .field__input {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.field--comment {
+  display: block;
+  margin: 0 6.25vw 23px 6.25vw;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 9.11% 65px 9.11%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 7.64% 67px 7.64%;
+  }
+}
+
 .field__input {
   font-family: inherit;
   font-size: 16px;
@@ -56,5 +84,23 @@
     font-size: 20px;
     line-height: 30px;
     padding: 10px 13px;
+  }
+}
+
+.field__textarea {
+  display: block;
+  padding: 9px 13px;
+  border: 1px solid $color-gray-300;
+  width: 100%;
+  resize: none;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

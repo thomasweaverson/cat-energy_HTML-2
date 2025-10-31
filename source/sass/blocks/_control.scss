@@ -64,3 +64,25 @@
     }
   }
 }
+
+.control--checkbox .control__name::before {
+  border-radius: 0;
+}
+
+.control--checkbox .control__input:checked + .control__name::after {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  background-image: url("../../img/icons/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    background-size: 24px 18.7px;
+  }
+}

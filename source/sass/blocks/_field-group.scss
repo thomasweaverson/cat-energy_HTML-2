@@ -14,6 +14,22 @@
   }
 }
 
+.field-group--additional {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.field-group__heading-wrapper {
+  position: relative;
+}
+
 .field-group__heading {
   @include title-with-line(
     24px,
@@ -60,10 +76,63 @@
   list-style: none;
 }
 
+.field-group__list--contact {
+  margin-bottom: 24px;
+  margin-inline: 6.25%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    margin-inline: 9.11%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+    margin-inline: 7.71%;
+  }
+}
+
+.field-group__list--additional {
+  margin-inline: 6.25%;
+
+  @media (min-width: $tablet-width) {
+    margin-inline: 9.11%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 312px);
+    gap: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-inline: 7.71%;
+
+    grid-template-columns: repeat(4, 293px);
+  }
+}
+
 .field-group__item--goal {
   position: relative;
 
   &:not(:last-child) {
     margin-bottom: 13px;
+  }
+}
+
+.field-group__item--contact {
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.field-group__item--additional {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

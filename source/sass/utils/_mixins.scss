@@ -28,12 +28,10 @@
   $padding-right,
   $line-top,
   $line-color: $color-green,
-  $line-width: 200vw,
   $font-family: $font-accent,
   $font-weight: 400,
   $bg-color: $color-white
 ) {
-  position: relative;
   font-family: $font-family;
   font-weight: $font-weight;
   font-size: $font-size;
@@ -48,13 +46,10 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: $line-width;
+    width: 100vw;
     top: $line-top;
+    left: 0;
     height: 2px;
     background-color: $line-color;
-
-    @if $margin-left != 0 {
-      left: -50%;
-    }
   }
 }
