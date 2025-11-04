@@ -4,6 +4,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/fav-icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/fav-icons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Cat Energy - Подбор программы</title>
     <link rel="stylesheet" href="./css/style.css">
 
@@ -12,8 +16,14 @@
   <body class="page__body">
     <header class="page__header page-header">
       <nav class="page-header__nav">
-        <a class="page-header__logo logo">
-          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+        <a class="page-header__logo logo" href="./index.html">
+          <div class="logo__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-image-large.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+              <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+            </picture>
+          </div>
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
         </a>
 
@@ -203,7 +213,8 @@
     <footer class="page__footer page-footer">
       <div class="page-footer__layout">
         <a class="page-footer__logo">
-          <img class="logo__image" src="./img/logo-sign.svg" width="128" height="24" alt="Cat Energy">
+          <img class="logo__image logo__image--footer" src="./img/logo-sign.svg" width="128" height="24"
+            alt="Cat Energy">
         </a>
 
         <ul class="page-footer__social-list social-list">

@@ -4,6 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/fav-icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/fav-icons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Cat Energy - Функциональное питание для котов. Главная</title>
     <link rel="stylesheet" href="css/style.css">
 
@@ -12,8 +16,14 @@
   <body class="page__body">
     <header class="page__header page-header">
       <nav class="page-header__nav">
-        <a class="page-header__logo logo">
-          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+        <a class="page-header__logo logo"`>
+          <div class="logo__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-image-large.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+              <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+            </picture>
+          </div>
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
         </a>
 
@@ -48,8 +58,16 @@
           <p class="promo__motto">
             Занялся собой? Займись котом!
           </p>
-          <img class="promo__image" src="./img/promo-product.png" width="280" height="270"
-            alt="Продукт Cat Energy Pro с курицей.">
+          <div class="promo__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="./img/promo-product-large.png 1x, ./img/promo-product-large@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/promo-product-medium.png 1x, ./img/promo-product-medium@2x.png 2x">
+              <img class="promo__image" src="./img/promo-product.png" srcset="./img/promo-product@2x.png 2x" width="280"
+                height="270" alt="Продукт Cat Energy Pro с курицей.">
+            </picture>
+          </div>
           <a href="./form.html" class="promo__button button">Подобрать программу</a>
 
         </div>
@@ -125,12 +143,24 @@
 
               <div class="example__comparison">
                 <div class="example__images">
-                  <img class="example__image example__image--before" src="./img/before-mobile.png" width="280"
-                    height="232" alt="Кот до программы питания: выглядит толстым">
-                  <img class="example__image example__image--after" src="./img/after-mobile.png" width="280"
-                    height="232" alt="Кот после программы питания: стройный, бодрый и здоровый-">
-                  <img class="example__image example__image--split" src="./img/splitted-after-before-cat.png"
-                    width="594" height="511" alt="Комбинированное изображение для демонстрации">
+                  <div class="example__image example__image--before example__image--active">
+                    <picture>
+                      <source media="(min-width: 768px)"
+                        srcset="./img/cat-fat-medium.png 1x, ./img/cat-fat-medium@2x.png 2x">
+                      <img src="./img/cat-fat-small.png" srcset="./img/cat-fat-small@2x.png 2x" width="280" height="232"
+                        alt="Кот до программы питания: выглядит толстым">
+                    </picture>
+                  </div>
+                  <div class="example__image example__image--after">
+                    <picture>
+                      <source media="(min-width: 768px)"
+                        srcset="./img/cat-skinny-medium.png 1x, ./img/cat-skinny-medium@2x.png 2x">
+                      <img src="./img/cat-skinny-small.png" srcset="./img/cat-skinny-small@2x.png 2x" width="280"
+                        height="232" alt="Кот после программы питания: стройный, бодрый и здоровый-">
+                    </picture>
+                  </div>
+                  <!-- <img class="example__image example__image--split" src="./img/splitted-after-before-cat.png"
+                    width="594" height="511" alt="Комбинированное изображение для демонстрации"> -->
                 </div>
 
                 <div class="example__switcher switcher">
@@ -173,7 +203,8 @@
     <footer class="page__footer page-footer">
       <div class="page-footer__layout">
         <a class="page-footer__logo">
-          <img class="logo__image" src="./img/logo-sign.svg" width="128" height="24" alt="Cat Energy">
+          <img class="logo__image logo__image--footer" src="./img/logo-sign.svg" width="128" height="24"
+            alt="Cat Energy">
         </a>
 
         <ul class="page-footer__social-list social-list">

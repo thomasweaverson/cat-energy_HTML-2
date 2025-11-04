@@ -295,30 +295,49 @@
   }
 }
 
+.example__images {
+  @media (min-width: $tablet-width) {
+    max-width: 592px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    overflow: hidden;
+  }
+}
+
 .example__image {
 
-  display: block;
+  display: none;
   margin: 0 auto;
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    display: flex;
+    margin-inline: 0;
+    width: unset;
+    overflow: hidden;
+
+    img {
+      width: 592px;
+      height: 511px;
+    }
+  }
+}
+
+.example__image--active {
+  @media (max-width: $mobile-width-only) {
+
+    display: block;
+    width: min-content;
   }
 }
 
 .example__image--after {
-  display: none;
-}
-
-.example__image--split {
-  display: none;
-
   @media (min-width: $tablet-width) {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    justify-content: end;
   }
 }
+
 
 .example__switcher {
   width: 210px;

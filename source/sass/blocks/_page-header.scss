@@ -155,10 +155,15 @@
   display: block;
   width: 100%;
   height: 302px;
-  background-image: url("../../img/background/promo.jpg"), linear-gradient(to right, #65a646, #63a443);
+  background-image: url("../../img/background/promo-small.jpg"), linear-gradient(to right, #65a646, #63a443);
   background-repeat: no-repeat, no-repeat;
 
   background-position: top center;
+
+  @media (min-resolution: 2dppx) and (max-width: $mobile-width-only) {
+    background-image: url("../../img/background/promo-small@2x.jpg"), linear-gradient(to right, #65a646, #63a443);
+    background-size: auto 302px;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -166,7 +171,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    background-image: linear-gradient(to right, #68b738d9, #68b738d9), url("../../img/background/cat-large.jpg");
+    background-image: linear-gradient(to right, #68b738d9, #68b738d9), url("../../img/background/promo-large.jpg");
 
     background-repeat: no-repeat, no-repeat;
     background-size: cover, auto;
@@ -178,6 +183,11 @@
     width: 50%;
     max-width: 1044px;
     height: 694px;
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, #68b738d9, #68b738d9), url("../../img/background/promo-large@2x.jpg");
+    background-size: auto, 1044px 695px;
   }
 }
 

@@ -33,10 +33,28 @@
   }
 }
 
-.card__image {
+.card__image-wrapper {
   grid-area: image;
   align-self: center;
   justify-self: center;
+}
+
+.card__image {
+  &--small {
+    @media (min-width: $tablet-width) {
+      width: 162px;
+      height: 173px;
+      object-fit: contain;
+    }
+  }
+
+  &--big {
+    @media (min-width: $tablet-width) {
+      width: 168px;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
 }
 
 .card__heading {

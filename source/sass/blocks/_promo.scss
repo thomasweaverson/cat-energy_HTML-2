@@ -76,17 +76,26 @@
   margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
+
     width: 709px;
     height: 609px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1 / 4;
     margin-top: 0;
     width: 552px;
     height: 499px;
+  }
+}
+
+.promo__image-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 4;
     grid-column: 3 / 4;
   }
 }
