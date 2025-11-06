@@ -1,5 +1,8 @@
 {
-  "extends": "stylelint-config-htmlacademy",
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "./.stylelintrc.thws-student.json"
+],
 
   "rules": {
     "declaration-no-important": true,

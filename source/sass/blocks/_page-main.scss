@@ -9,9 +9,6 @@
   padding-top: 27px;
   margin-bottom: 20px;
 
-  // outline: 1px solid #aa0000;
-  // outline-offset: -1px;
-
   @media (min-width: $tablet-width) {
     position: relative;
     padding: 0;
@@ -114,9 +111,3 @@
     line-height: 30px;
   }
 }
-
-.page-main__footer {
-  outline: 1px solid #aa0000;
-  outline-offset: -1px;
-}
-

@@ -72,8 +72,6 @@
 
   counter-increment: step;
 
-  outline: 1px solid #aa00aa;
-  outline-offset: -1px;
 
   &::before {
     content: "";
@@ -142,7 +140,7 @@
 
 .how-it-works__item--leaf {
   &::before {
-    background-image: url("../../img/icons/leaf.svg");
+    background-image: url("../img/icons/leaf.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -150,7 +148,7 @@
 
 .how-it-works__item--powder {
   &::before {
-    background-image: url("../../img/icons/powder.svg");
+    background-image: url("../img/icons/powder.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -158,7 +156,7 @@
 
 .how-it-works__item--cutlery {
   &::before {
-    background-image: url("../../img/icons/cutlery.svg");
+    background-image: url("../img/icons/cutlery.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -166,7 +164,7 @@
 
 .how-it-works__item--scales {
   &::before {
-    background-image: url("../../img/icons/scales.svg");
+    background-image: url("../img/icons/scales.svg");
     background-repeat: no-repeat;
     background-position: center;
   }

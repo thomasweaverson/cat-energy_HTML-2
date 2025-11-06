@@ -5,7 +5,7 @@
 
   color: $color-white;
   background-color: $color-green;
-  background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-small.jpg");
+  background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-small.jpg");
 
   font-size: 16px;
   text-align: center;
@@ -16,27 +16,27 @@
   background-size: auto, cover;
 
   @media (min-resolution: 2dppx) and (max-width: $mobile-width-only) {
-    background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-small@2x.jpg");
+    background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-small@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     padding: 71px 0 69px 422px;
 
-    background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-medium.jpg");
+    background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-medium.jpg");
     background-position: 77px 57px, center center;
     background-size: 80px 82.5px, cover;
 
     @media (min-resolution: 2dppx) and (max-width: $tablet-width) {
-      background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-medium@2x.jpg");
+      background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-medium@2x.jpg");
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 184px 0 43px 0;
-    background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-large.jpg");
+    background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-large.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/icons/special-offer-gift.svg"), url("../img/background/catbag-large@2x.jpg");
+      background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-large@2x.jpg");
     }
   }
 }
