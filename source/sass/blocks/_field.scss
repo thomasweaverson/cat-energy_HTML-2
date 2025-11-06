@@ -42,6 +42,7 @@
 .field--e-mail,
 .field--phone {
   display: flex;
+  position: relative;
 
   & .field__name {
     margin-right: 9px;
@@ -52,6 +53,17 @@
     flex: 1;
     min-width: 0;
   }
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+  }
+}
+
+.field--e-mail svg {
+  color: $color-gray-800;
 }
 
 .field--comment {
