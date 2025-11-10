@@ -63,6 +63,10 @@
       height: 40px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 58px;
+  }
 }
 
 .control--checkbox .control__name::before {

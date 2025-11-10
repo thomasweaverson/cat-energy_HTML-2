@@ -20,11 +20,11 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  margin: 0 0 13px 0;
+  margin: 0 0 13px 1px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,6 +47,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 83px;
+    margin-top: 5px;
     margin-bottom: 0;
     align-self: center;
   }
@@ -57,19 +59,28 @@
 
   @media (min-width: $tablet-width) {
     justify-self: end;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   @media (min-width: $desktop-width) {
     justify-self: start;
+    // margin-left: 9px;
   }
 }
 
 .card-additional__button {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 9px;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     font-size: 16px;
     line-height: 26px;
     padding-block: 7px;
+    margin-left: -1px;
+    margin-right: -1px;
   }
 
   @media (min-width: $desktop-width) {

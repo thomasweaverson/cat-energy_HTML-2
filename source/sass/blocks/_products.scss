@@ -6,7 +6,11 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
   }
 }
 
@@ -33,7 +37,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 80px 63px;
+    gap: 62px 80px;
   }
 }
 
@@ -49,4 +53,14 @@
 
 .products__show-more {
   padding-inline: 6.25%;
+  padding-block: 17px 24px;
+
+  @media (min-width: $tablet-width) {
+
+    margin-top: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+  }
 }

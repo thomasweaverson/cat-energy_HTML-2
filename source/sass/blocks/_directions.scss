@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 70px;
   }
 }
 
@@ -24,7 +24,7 @@
 
 .directions__item {
   background-color: $color-gray-100;
-  padding: 30px 20px 18px 20px;
+  padding: 30px 20px 21px 20px;
   position: relative;
   width: 87.5%;
   margin: 0 auto;
@@ -33,7 +33,7 @@
     content: "";
     position: absolute;
     top: 21px;
-    left: 29px;
+    left: 22px;
     width: 50px;
     height: 53px;
     background-image: url("../img/icons/cat-slim-back.svg");
@@ -41,9 +41,9 @@
     background-position: center;
 
     @media (min-width: $tablet-width) {
-      width: 200px;
+      width: 199px;
       height: 100%;
-      top: 0;
+      top: -1px;
       bottom: 0;
       left: unset;
       right: 62px;
@@ -51,10 +51,10 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 100px;
+      width: 103px;
       height: 106px;
-      top: 41px;
-      left: 52px;
+      top: 39px;
+      left: 50px;
       right: unset;
     }
   }
@@ -62,7 +62,7 @@
   &--pro::after {
     content: "";
     position: absolute;
-    top: 35px;
+    top: 24px;
     left: 13px;
     width: 67px;
     height: 50px;
@@ -71,10 +71,10 @@
     background-position: center;
 
     @media (min-width: $tablet-width) {
-      width: 268px;
+      width: 271px;
       height: 100%;
-      top: 0;
-      right: 28px;
+      top: -5px;
+      right: 27px;
       left: unset;
       background-size: contain;
       transform: translateY(10px);
@@ -83,7 +83,7 @@
     @media (min-width: $desktop-width) {
       width: 134px;
       height: 100px;
-      top: 47px;
+      top: 45px;
       left: 33px;
       right: unset;
       transform: translateY(0);
@@ -95,8 +95,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 32px 47px 32px;
+    padding: 76px 32px 51px 32px;
     width: 92.19%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -119,14 +123,14 @@
   margin: 0;
   margin-bottom: 29px;
   padding: 0;
-  padding-left: 91px;
+  padding-left: 71px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     padding-left: 20px;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -137,7 +141,6 @@
 
 .directions__description {
   margin: 0;
-  padding-right: 13px;
 
   &::after {
     content: "";
@@ -145,21 +148,27 @@
     width: 100%;
     height: 1px;
     background-color: $color-gray-400;
-    margin-top: 22.5px;
-    margin-bottom: 15.5px;
+    margin-top: 22px;
+    margin-bottom: 19.5px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 304px;
+    margin-right: 280px;
     font-family: "Arial", "Helvetica", sans-serif;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 47px;
     padding: 0;
     padding-left: 20px;
 
     &::after {
       display: none;
+    }
+
+    &--slim {
+      br {
+        display: none;
+      }
     }
   }
 
@@ -181,7 +190,7 @@
   text-decoration: none;
   width: fit-content;
 
-  padding-left: 10px;
+  padding-left: 9px;
   margin-left: -10px;
   padding-right: 47px;
   padding-top: 10px;
@@ -192,8 +201,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 13px;
-    right: 0;
+    top: 11px;
+    right: -2px;
 
     display: block;
     width: 32px;

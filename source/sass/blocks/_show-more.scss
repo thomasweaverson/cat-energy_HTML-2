@@ -1,14 +1,11 @@
 @use "../utils/variables.scss" as *;
 
 .show-more {
-  padding-block: 17px 25px;
-
   border-bottom: 1px solid $color-gray-200;
 
   @media (min-width: $tablet-width) {
     padding: 50px 36px 36px 36px;
     width: 324px;
-    margin-top: 82px;
     border: 2px solid $color-gray-100;
     position: relative;
   }
@@ -85,6 +82,9 @@
 
 .show-more__button {
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  padding-block: 11px 9px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

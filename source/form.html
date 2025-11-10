@@ -4,17 +4,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/fav-icons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/fav-icons/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <title>Cat Energy - Подбор программы</title>
+    <title>Cat Energy. Функциональное питание для котов. Выбор программы</title>
     <link rel="stylesheet" href="./css/style.min.css">
-
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/fav-icons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/fav-icons/apple180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
   </head>
 
   <body class="page__body">
-    <header class="page__header page-header">
+    <header class="page__header page__header--form page-header">
       <nav class="page-header__nav">
         <a class="page-header__logo logo" href="./index.html">
           <div class="logo__image-wrapper">
@@ -95,7 +96,7 @@
               <ul class="field-group__list">
                 <li class="field-group__item field-group__item--goal">
                   <label class="control control--radio">
-                    <input class="control__input" name="goal" type="radio" value="fit">
+                    <input class="control__input" name="goal" type="radio" value="fit" checked>
                     <span class="control__name">Похудение</span>
                   </label>
                 </li>
@@ -117,7 +118,7 @@
 
           <fieldset class="form__section field-group">
             <div class="field-group__heading-wrapper">
-              <legend class="field-group__heading">Контактные данные<br> (владельца кота)</legend>
+              <legend class="field-group__heading">Контактные данные&nbsp;<br> (владельца кота)</legend>
             </div>
 
             <ul class="field-group__list field-group__list--contact">
@@ -149,14 +150,14 @@
 
             <label class="field field--comment">
               <span class="field__name visually-hidden">Комментарий:</span>
-              <textarea class="field__textarea" name="comment" rows="5"
+              <textarea class="field__textarea" name="comment" rows="7"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </fieldset>
 
           <fieldset class="form__section field-group field-group--additional">
             <div class="field-group__heading-wrapper">
-              <legend class="field-group__heading">Дополнительно</legend>
+              <legend class="field-group__heading field-group__heading--additional">Дополнительно</legend>
             </div>
 
             <ul class="field-group__list field-group__list--additional">
@@ -218,25 +219,33 @@
 
     <footer class="page__footer page-footer">
       <div class="page-footer__layout">
-        <a class="page-footer__logo">
-          <img class="logo__image logo__image--footer" src="./img/logo-sign.svg" width="128" height="24"
-            alt="Cat Energy">
+        <a class="page-footer__logo logo">
+          <img class="logo__sign logo__sign--footer" src="./img/logo-sign.svg" width="130" height="26" alt="Cat Energy">
         </a>
 
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы Вконтакте</span>
+              <svg width="22" height="15" viewBox="0 0 22 15">
+                <use xlink:href="./img/sprite.svg#vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в instagram</span>
+              <svg width="16" height="16" viewBox="0 0 16 16">
+                <use xlink:href="./img/sprite.svg#instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в facebook</span>
+              <svg width="11" height="19" viewBox="0 0 12 20">
+                <use xlink:href="./img/sprite.svg#facebook"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -244,7 +253,9 @@
         <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано в</span>
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__image" src="./img/htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
+          <svg width="27" height="34" viewBox="0 0 27 34">
+            <use xlink:href="./img/sprite.svg#logo-html-academy"></use>
+          </svg>
         </a>
       </div>
     </footer>

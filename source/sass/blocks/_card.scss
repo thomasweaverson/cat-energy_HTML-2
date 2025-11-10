@@ -2,7 +2,7 @@
 
 .card {
 
-  padding: 11px 6.25% 25px 6.25%;
+  padding: 2px 6.25% 24px 6.25%;
   border-bottom: 1px solid $color-gray-200;
   display: grid;
   grid-template-columns: 140fr 76fr 64fr;
@@ -14,7 +14,7 @@
   @media (min-width: $tablet-width) {
     padding: 8px 36px 39px 36px;
     grid-template-columns: 1fr;
-    grid-template-rows: 234px repeat(3, auto);
+    grid-template-rows: 200px repeat(3, auto);
     grid-template-areas:
       "image"
       "title"
@@ -27,9 +27,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 1px 38px 40px 38px;
+    padding: 3px 38px 40px 38px;
 
-    grid-template-rows: 242px repeat(3, auto);
+    grid-template-rows: 196px repeat(3, auto);
   }
 }
 
@@ -40,20 +40,17 @@
 }
 
 .card__image {
-  &--small {
-    @media (min-width: $tablet-width) {
-      width: 162px;
-      height: 173px;
-      object-fit: contain;
-    }
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
   }
 
-  &--big {
-    @media (min-width: $tablet-width) {
-      width: 168px;
-      height: 200px;
-      object-fit: contain;
-    }
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 196px;
   }
 }
 
@@ -68,18 +65,21 @@
 
   text-transform: uppercase;
 
-  margin: 0;
+  margin: 10px 0 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
 
     text-align: center;
-    margin-bottom: 21px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: 6px;
   }
 
   @media (min-width: $desktop-width) {
     line-height: 23px;
+    margin-top: 42px;
     margin-bottom: 24px;
   }
 }
@@ -88,14 +88,14 @@
   grid-area: specification;
   color: $color-gray-700;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
 
-  margin-top: 18px;
-  margin-bottom: 22px;
+  margin-top: 13px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 26.5px;
 
     font-size: 16px;
     line-height: 16px;
@@ -109,7 +109,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 6.5px;
     border-bottom: 1px solid $color-gray-500;
   }
 }
@@ -120,6 +120,16 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+    margin-right: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 1px;
+    margin-right: 3px;
+  }
 }
 
 .card__break-mobile {

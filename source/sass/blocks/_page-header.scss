@@ -1,11 +1,8 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
 
 .page-header__nav {
   display: grid;
   grid-template-columns: 6.25% 1fr min-content 6.25%;
-
-  // height: 38px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 3.91% min-content 1fr 3.91%;
@@ -38,7 +35,8 @@
     gap: 35px;
 
     position: static;
-    margin-top: 18px;
+    margin-top: 14px;
+    margin-right: 2px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     justify-self: end;
@@ -49,6 +47,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 16px;
+    margin-right: 1px;
   }
 }
 
@@ -68,7 +67,7 @@
 .page-header__toggler {
   grid-column: 3 / 4;
   width: 24px;
-  height: 18px;
+  height: 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -112,14 +111,14 @@
     }
 
     &::after {
-      transform: translateY(6.5px);
+      transform: translateY(6px);
     }
   }
 }
 
 .page-header__toggler--opened {
   position: relative;
-  bottom: -3px;
+
 
   .page-header__toggler-line {
 
@@ -130,8 +129,8 @@
       content: "";
       display: block;
       position: absolute;
-      width: 24.76px;
-      height: 1.2px;
+      width: 24.5px;
+      height: 1.5px;
       background-color: $color-black;
     }
 
@@ -196,3 +195,4 @@
     top: 211px + 55px;
   }
 }
+

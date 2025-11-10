@@ -1,10 +1,10 @@
 @use "../utils/variables.scss" as *;
 
 .form__fieldset-group {
-  margin: 0 6.25% 26px 6.25%;
+  margin: 0 6.25% 25px 6.25%;
 
   @media (min-width: $tablet-width) {
-    margin: 0 9.11% 75px 9.11%;
+    margin: 0 9.11% 74px 9.11%;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,10 +22,11 @@
 }
 
 .form__section--info {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
+    margin-right: -3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,10 +36,10 @@
 
 .form__section--goal {
   margin-inline: -6.25vw;
-  padding: 22px 6.25vw 19px 6.25vw;
+  padding: 22px 6.25vw 18px 6.25vw;
 
   @media (min-width: $tablet-width) {
-    margin-inline: 0;
+    margin-inline: 1px -3px;
     padding: 24px 27px;
   }
 }
@@ -54,7 +55,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 7.71% 72px 7.71%;
+    margin: 0 7.71% 82px 7.71%;
 
     grid-template-columns: repeat(4, 293px);
   }
@@ -90,5 +91,6 @@
 
     align-self: center;
     font-size: 16px;
+    margin-top: -3px;
   }
 }

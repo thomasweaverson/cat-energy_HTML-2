@@ -3,28 +3,29 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/fav-icons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/fav-icons/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <title>Cat Energy - Функциональное питание для котов. Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cat Energy. Функциональное питание для котов. (Псевдо)официальный сайт | Описание деятельности</title>
     <link rel="stylesheet" href="css/style.min.css">
-
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/fav-icons/icon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/fav-icons/apple180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
   </head>
 
   <body class="page__body">
     <header class="page__header page-header">
       <nav class="page-header__nav">
-        <a class="page-header__logo logo" `>
+        <a class="page-header__logo logo">
           <div class="logo__image-wrapper">
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/logo-image-large.svg">
               <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
-              <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+              <img class="logo__image" src="./img/logo-image.svg" width="34" height="39" alt="Cat Energy">
             </picture>
           </div>
-          <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="" aria-hidden="true">
+          <img class="logo__sign" src="./img/logo-sign.svg" width="102" height="19" alt="" aria-hidden="true">
         </a>
 
         <button class="page-header__toggler page-header__toggler--nojs" type="button">
@@ -88,9 +89,9 @@
 
           <article class="directions__item directions__item--slim">
             <h3 class="directions__title">Похудение</h3>
-            <p class="directions__description">Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям?
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="directions__description directions__description--slim">Ваш кот весит больше собаки
+              и&nbsp;<br>почти утратил способность лазить&nbsp;<br>по
+              деревьям? Пора на диету! Cat&nbsp;<br>Energy Slim поможет вашему&nbsp;<br>питомцу сбросить лишний вес.</p>
             <a class="directions__link" href="./catalog.html#first-slim">Каталог Slim</a>
           </article>
 
@@ -106,21 +107,25 @@
       </section>
 
       <section class="page-main__section how-it-works">
-        <h2 class="how-it-works__title">Как это работает</h2>
-        <ol class="how-it-works__list">
-          <li class="how-it-works__item how-it-works__item--leaf">
-            Функциональное питание содержит только полезные питательные вещества.
-          </li>
-          <li class="how-it-works__item how-it-works__item--powder">
-            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          </li>
-          <li class="how-it-works__item how-it-works__item--cutlery">
-            Замените один-два приема обычной еды на наше функциональное питание.
-          </li>
-          <li class="how-it-works__item how-it-works__item--scales">
-            Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!
-          </li>
-        </ol>
+        <div class="how-it-works__wrapper">
+
+          <h2 class="how-it-works__title">Как это работает</h2>
+          <ol class="how-it-works__list">
+            <li class="how-it-works__item how-it-works__item--leaf">
+              Функциональное питание содержит только полезные питательные вещества.
+            </li>
+            <li class="how-it-works__item how-it-works__item--powder">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </li>
+            <li class="how-it-works__item how-it-works__item--cutlery">
+              Замените один-два приема обычной еды на наше функциональное питание.
+            </li>
+            <li class="how-it-works__item how-it-works__item--scales">
+              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!
+            </li>
+          </ol>
+
+        </div>
       </section>
 
       <section class="page-main__section example">
@@ -133,7 +138,7 @@
                   Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный
                   результат
                   без
-                  изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+                  изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
                 </p>
 
                 <dl class="example__list">
@@ -153,6 +158,8 @@
                 <div class="example__images">
                   <div class="example__image example__image--before example__image--active">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="./img/example/cat-fat-medium.webp 1x, ./img/example/cat-fat-medium@2x.webp 2x">
                       <source media="(min-width: 768px)"
                         srcset="./img/example/cat-fat-medium.png 1x, ./img/example/cat-fat-medium@2x.png 2x">
                       <img src="./img/example/cat-fat-small.png" srcset="./img/example/cat-fat-small@2x.png 2x"
@@ -161,6 +168,8 @@
                   </div>
                   <div class="example__image example__image--after">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="./img/example/cat-skinny-medium.webp 1x, ./img/example/cat-skinny-medium@2x.webp 2x">
                       <source media="(min-width: 768px)"
                         srcset="./img/example/cat-skinny-medium.png 1x, ./img/example/cat-skinny-medium@2x.png 2x">
                       <img src="./img/example/cat-skinny-small.png" srcset="./img/example/cat-skinny-small@2x.png 2x"
@@ -208,8 +217,8 @@
 
     <footer class="page__footer page-footer">
       <div class="page-footer__layout">
-        <a class="page-footer__logo">
-          <img class="logo__image logo__image--footer" src="./img/logo-sign.svg" width="128" height="24"
+        <a class="page-footer__logo logo">
+          <img class="logo__sign logo__sign--footer" src="./img/logo-sign.svg" width="130" height="26"
             alt="Cat Energy">
         </a>
 
@@ -233,7 +242,7 @@
           <li class="social-list__item">
             <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в facebook</span>
-              <svg width="11" height="19" viewBox="0 0 11 19">
+              <svg width="11" height="19" viewBox="0 0 12 20">
                 <use xlink:href="./img/sprite.svg#facebook"></use>
               </svg>
             </a>

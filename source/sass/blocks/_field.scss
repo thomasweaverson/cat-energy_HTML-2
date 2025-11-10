@@ -29,8 +29,12 @@
   }
 
   & .field__name {
-    margin-right: 12px;
+    margin-right: 14px;
     align-self: center;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 19px;
+    }
   }
 
   & .field__input {
@@ -52,13 +56,38 @@
   & .field__input {
     flex: 1;
     min-width: 0;
+    padding-left: 18px;
   }
 
   & svg {
     position: absolute;
-    top: 50%;
+    top: 52%;
     transform: translateY(-50%);
-    right: 13px;
+    right: 14px;
+
+    @media (min-width: $tablet-width) {
+      right: 19px;
+    }
+  }
+}
+
+.field--e-mail {
+  .field__name {
+    margin-right: 20px;
+  }
+
+  .field__input {
+    padding-left: 20px;
+  }
+}
+
+.field--phone {
+  .field__name {
+    margin-right: 14px;
+  }
+
+  .field__input {
+    padding-left: 20px;
   }
 }
 
@@ -66,12 +95,18 @@
   color: $color-gray-800;
 }
 
+.field--phone svg {
+  @media (min-width: $desktop-width) {
+    right: 17px;
+  }
+}
+
 .field--comment {
   display: block;
-  margin: 0 6.25vw 23px 6.25vw;
+  margin: 0 6.25vw 21px 6.25vw;
 
   @media (min-width: $tablet-width) {
-    margin: 0 9.11% 65px 9.11%;
+    margin: 0 9.11% 63px 9.11%;
   }
 
   @media (min-width: $desktop-width) {
@@ -86,7 +121,7 @@
   text-transform: uppercase;
 
   border: 1px solid #e7e7e7;
-  padding: 9.5px 13px;
+  padding: 9.5px 15px;
 
   &::placeholder {
     color: $color-gray-700;
@@ -95,13 +130,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 10px 13px;
+    padding: 10px 17px;
   }
 }
 
 .field__textarea {
   display: block;
-  padding: 9px 13px;
+  margin: 38px 0 0 0;
+  padding: 9px 13px 14px;
   border: 1px solid $color-gray-300;
   width: 100%;
   resize: none;
@@ -114,5 +150,8 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    height: 175px;
+    padding: 9px 18px 14px 18px;
   }
 }

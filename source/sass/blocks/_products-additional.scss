@@ -2,6 +2,8 @@
 @use "../utils/mixins.scss" as *;
 
 .products-additional {
+  margin-bottom: 35px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
   }
@@ -31,18 +33,18 @@
   @include title-with-line(
     24px,
     24px,
-    36px,
+    35px,
     0,
     6.25vw,
     22px,
-    16px
+    15px
   );
 
   @media (min-width: $tablet-width) {
     @include title-with-line(
       36px,
       36px,
-      80px,
+      81px,
       3.91vw,
       4.82vw,
       36px,
@@ -54,11 +56,11 @@
     @include title-with-line(
       36px,
       36px,
-      80px,
+      81px,
       4.86vw,
       2.78vw,
       35px,
-      23px
+      23.5px
     );
   }
 }
@@ -86,18 +88,22 @@
   padding-bottom: 18px;
   border-bottom: 1px solid $color-gray-500;
   margin-bottom: 13px;
+  padding-top: 0;
 
   &:first-child {
-    padding-top: 12px;
+    padding-top: 13px;
     border-top: 1px solid $color-gray-500;
+    margin-bottom: 12px;
 
     @media (min-width: $tablet-width) {
       padding-top: 26px;
       border-top: none;
+      margin-bottom: 2px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 14px;
+      padding-top: 15px;
+      margin-bottom: 1px;
     }
   }
 
@@ -110,12 +116,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 26px 38px 28px 38px;
+    padding: 25px 38px 27px 38px;
+    margin-bottom: 2px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 16px 0;
-    margin-bottom: 0;
+    padding: 14px 0 16px 0;
+    margin-bottom: 1px;
   }
 }
 

@@ -58,6 +58,7 @@
   @media (min-width: $tablet-width) {
     position: relative;
     display: block;
+    margin-inline: 10px;
 
     &::after {
       content: "";

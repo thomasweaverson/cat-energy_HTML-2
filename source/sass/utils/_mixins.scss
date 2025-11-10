@@ -34,3 +34,10 @@
     background-color: $line-color;
   }
 }
+
+@mixin typography($font-size: 16px, $line-height: 1, $font-weight: 400, $font-family: $font-accent) {
+  font-family: $font-accent;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

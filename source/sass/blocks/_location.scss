@@ -1,5 +1,4 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
 
 .location {
   position: relative;
@@ -16,7 +15,11 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 92.19%;
+    width: 81.77%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 84.72%;
   }
 }
 
@@ -24,21 +27,21 @@
   display: flex;
   gap: 2px;
 
-  padding-top: 26px;
+  padding-top: 27px;
   padding-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-    padding: 56px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 95px;
-    left: 7.64%;
+    left: 0;
     background-color: $color-white;
     width: 565px;
-    padding: 57px 80px;
+    padding: 61px 80px 61px 80px;
   }
 }
 
@@ -54,7 +57,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 26px;
   }
 }
 
@@ -64,13 +67,27 @@
   line-height: 20px;
   font-weight: 400;
   font-style: normal;
-  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 0 1 auto;
+    text-align: left;
+    width: fit-content;
+  }
 }
 
 .location__street {
   @media (min-width: $tablet-width) {
     display: inline-block;
     margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -3px;
+    margin-right: -5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -81,16 +98,16 @@
 }
 
 .location__city {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 20px;
   }
 }
-
-// .location__map-dummy {
-//   display: block;
-//   margin: 0 auto;
-// }
 
 .location__map {
   display: block;

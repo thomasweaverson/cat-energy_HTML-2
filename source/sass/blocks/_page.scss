@@ -4,7 +4,7 @@
   font-family: $font-body;
   font-size: 14px;
   line-height: 18px;
-  color: $color-gray-700;
+  color: $color-black;
   background-color: $color-white;
   height: 100%;
 }
@@ -28,7 +28,7 @@
   grid-area: header;
 
   @media (min-width: $tablet-width) {
-    margin-block: 26px 64px;
+    margin-block: 26px 62px;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,6 +38,24 @@
 }
 
 .page__header--catalog {
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.page__header--form {
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 74px;
   }
