@@ -9,6 +9,16 @@
   }
 }
 
+.logo:not(.logo--inactive) {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .logo--footer {
   display: block;
 }

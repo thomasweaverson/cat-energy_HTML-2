@@ -12,6 +12,16 @@
   }
 }
 
+.field--error {
+  & .field__input {
+    border-color: $color-error;
+
+    & + svg {
+      color: $color-error;
+    }
+  }
+}
+
 .field--cat-name,
 .field--cat-weight,
 .field--cat-age {
@@ -142,6 +152,19 @@
     @include typography(20px, 30px, 400, $font-accent);
     padding: 10px 17px;
   }
+
+  &:hover {
+    border: 1px solid $color-gray-500;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-gray-700;
+  }
+
+  &:focus + svg {
+    color: $color-green;
+  }
 }
 
 .field__textarea {
@@ -160,6 +183,15 @@
 
     height: 175px;
     padding: 9px 18px 14px 18px;
+  }
+
+  &:hover {
+    border: 1px solid $color-gray-500;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-gray-700;
   }
 }
 

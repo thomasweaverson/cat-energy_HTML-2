@@ -31,6 +31,10 @@
   }
 }
 
+.control__input[disabled] + .control__name {
+  opacity: 0.3;
+}
+
 .control__name {
   padding-left: 45px;
 
@@ -62,6 +66,12 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 58px;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $color-gray-550;
+    }
   }
 }
 

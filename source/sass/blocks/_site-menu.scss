@@ -54,9 +54,19 @@
       border-top: none;
     }
   }
+
+  &:not(.site-menu__item--current):hover {
+    opacity: 0.6;
+  }
+
+  &:not(.site-menu__item--current):active {
+    opacity: 0.3;
+  }
 }
 
 .site-menu__item--current {
+  cursor: default;
+
   @media (min-width: $tablet-width) {
     border-bottom: 2px solid $color-green;
   }

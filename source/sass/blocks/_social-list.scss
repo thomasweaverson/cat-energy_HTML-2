@@ -51,4 +51,12 @@
       margin-right: 16px;
     }
   }
+
+  &:hover {
+    color: $color-green;
+  }
+
+  &:active {
+    color: rgba($color-green, 0.3);
+  }
 }
