@@ -1,5 +1,5 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .directions {
   margin-bottom: 20px;
@@ -116,10 +116,7 @@
 }
 
 .directions__title {
-  font-family: $font-accent;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
+  @include typography(24px, 37px, 400, $font-accent);
   margin: 0;
   margin-bottom: 29px;
   padding: 0;
@@ -127,9 +124,8 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    @include typography(36px, 36px, 400, $font-accent);
     padding-left: 20px;
-    font-size: 36px;
-    line-height: 36px;
     margin-bottom: 26px;
   }
 
@@ -140,7 +136,7 @@
 }
 
 .directions__description {
-  margin: 0;
+  @include typography(14px, 18px, 400, $font-body);
 
   &::after {
     content: "";
@@ -153,10 +149,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    @include typography(16px, 24px, 400, $font-body);
     margin-right: 280px;
-    font-family: "Arial", "Helvetica", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
     margin-bottom: 47px;
     padding: 0;
     padding-left: 20px;
@@ -182,10 +176,8 @@
   display: block;
   position: relative;
   color: $color-black;
-  font-family: $font-accent;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 400;
+
+  @include typography(16px, 16px, 400, $font-accent);
   text-transform: uppercase;
   text-decoration: none;
   width: fit-content;
@@ -227,8 +219,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
+    @include typography(20px, 20px, 400, $font-accent);
+
     padding-top: 20px;
     padding-right: 57px;
     padding-bottom: 20px;

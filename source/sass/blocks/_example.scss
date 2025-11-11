@@ -1,5 +1,5 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .example__wrapper {
   background-color: $color-gray-250;
@@ -21,7 +21,6 @@
 }
 
 .example__container {
-  // @include container;
   width: 87.5%;
   margin: 0 auto;
 
@@ -42,22 +41,17 @@
 }
 
 .example__heading {
-  font-family: $font-accent;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
+  @include typography(36px, 40px, 400, $font-accent);
   margin: 0;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
-    font-size: 60px;
-    line-height: 60px;
+
+    @include typography(60px, 60px, 400, $font-accent);
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 60px;
-    line-height: 60px;
     margin-bottom: 146px;
   }
 }
@@ -67,16 +61,14 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
-    font-size: 16px;
-    line-height: 24px;
+    margin-bottom: 56px;
+
+    @include typography(16px, 24px, 400, $font-body);
   }
 
   @media (min-width: $desktop-width) {
     max-width: 436px;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 70px;
+    margin-bottom: 73px;
   }
 }
 
@@ -104,19 +96,25 @@
   }
 }
 
+.example__weight,
+.example__time {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.example__time {
+  grid-column: 3 / 4;
+}
+
 .example__title {
   position: relative;
   z-index: 3;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 
-  justify-self: center;
-  align-self: end;
-  margin-top: 14.5px;
+  margin-top: -10px;
 
-  font-size: 12px;
-  line-height: 1;
-  font-weight: 400;
+  @include typography(12px, 12px, 400, $font-body);
+
   text-transform: lowercase;
   text-align: center;
 
@@ -128,11 +126,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 14px;
+    @include typography(14px, 14px, 400, $font-body);
     background-color: $color-white;
     width: unset;
     padding-inline: 8px;
+    margin-top: -6px;
+    position: relative;
+    top: -2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -144,20 +144,14 @@
   position: relative;
   z-index: 1;
 
-  margin: 0;
-  grid-column: 1 / 2;
-  justify-self: center;
-  grid-row: 1 / 2;
   width: 100%;
 
   padding-top: 13.5px;
   padding-bottom: 16.5px;
-  margin-bottom: 14px;
+  margin-left: 0;
 
-  font-family: $font-accent;
-  font-size: 24px;
-  line-height: 1;
-  font-weight: 400;
+  @include typography(24px, 24px, 400, $font-accent);
+
   text-transform: uppercase;
   text-align: center;
   color: $color-black;
@@ -187,11 +181,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 30px;
-    line-height: 37px;
+    @include typography(30px, 37px, 400, $font-accent);
     padding-top: 14px;
     padding-bottom: 19px;
-    margin-bottom: 5px;
   }
 }
 
@@ -200,6 +192,7 @@
   grid-row: 2 / 3;
   justify-self: center;
   margin-top: 20px;
+  // margin-left: -2px;
 
   @media (min-width: $tablet-width) {
     grid-column: 4 / 5;
@@ -212,24 +205,21 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     justify-self: start;
-    margin-top: 55px;
+    margin-top: 53px;
   }
 }
 
 .example__title--spending {
   margin: 0;
-  font-family: $font-accent;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+
+  @include typography(14px, 20px, 400, $font-accent);
   text-transform: uppercase;
   width: unset;
   display: inline;
   color: $color-black;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
+    @include typography(20px, 20px, 400, $font-accent);
     display: block;
     background-color: transparent;
     margin-bottom: 9px;
@@ -247,10 +237,9 @@
 
 .example__definition--spending {
   display: inline;
-  font-family: $font-accent;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  margin-left: 6px;
+
+  @include typography(14px, 20px, 400, $font-accent);
   text-transform: uppercase;
   border: none;
 
@@ -259,15 +248,17 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
+    @include typography(20px, 20px, 400, $font-accent);
     display: block;
     padding: 0;
     text-align: right;
+    margin-left: -1px;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
     display: inline;
+    margin-left: 1px;
   }
 }
 

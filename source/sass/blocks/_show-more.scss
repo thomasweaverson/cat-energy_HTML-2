@@ -1,10 +1,11 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .show-more {
   border-bottom: 1px solid $color-gray-200;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 36px 36px 36px;
+    padding: 50px 36px 35px 36px;
     width: 324px;
     border: 2px solid $color-gray-100;
     position: relative;
@@ -12,7 +13,7 @@
 
   @media (min-width: $desktop-width) {
     width: 245px;
-    padding-top: 49px;
+    padding-top: 50px;
     padding-bottom: 39px;
   }
 }
@@ -45,20 +46,20 @@
 
     margin-bottom: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .show-more__heading {
-  font-family: $font-accent;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
+  @include typography(16px, 20px, 400, $font-accent);
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 8px 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 22px;
+    @include typography(20px, 22px, 400, $font-accent);
     margin-bottom: 23px;
   }
 }
@@ -66,29 +67,26 @@
 .show-more__description {
   color: $color-gray-700;
 
-  font-size: 12px;
-  line-height: 16px;
+  @include typography(12px, 16px, 400, $font-body);
 
   text-align: center;
 
   margin: 0 0 21px 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 18px;
+    @include typography(16px, 18px, 400, $font-body);
     margin-bottom: 87px;
   }
 }
 
 .show-more__button {
   width: 100%;
-  font-size: 16px;
-  line-height: 20px;
+
+  @include typography(16px, 20px, 400, $font-accent);
   padding-block: 11px 9px;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 1;
+    @include typography(16px, 16px, 400, $font-accent);
     padding: 12px 0;
 
     position: static;

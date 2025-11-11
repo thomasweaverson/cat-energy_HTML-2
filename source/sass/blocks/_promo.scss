@@ -1,8 +1,7 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .promo {
-
   color: $color-white;
 }
 
@@ -18,20 +17,16 @@
 }
 
 .promo__title {
-  font-family: $font-accent;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1;
+  @include typography(36px, 36px, 400, $font-accent);
   text-align: center;
 
   margin: 0;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-
+    @include typography(60px, 60px, 400, $font-accent);
     margin-bottom: 43px;
     color: $color-black;
-    font-size: 60px;
     text-align: left;
 
     grid-row: 1 / 2;
@@ -48,10 +43,7 @@
 }
 
 .promo__motto {
-  font-family: $font-accent;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
+  @include typography(14px, 14px, 400, $font-accent);
   text-align: center;
   text-transform: uppercase;
 
@@ -63,7 +55,8 @@
     text-align: left;
     margin-left: 2px;
     margin-bottom: 19px;
-    font-size: 20px;
+
+    @include typography(20px, 20px, 400, $font-accent);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }

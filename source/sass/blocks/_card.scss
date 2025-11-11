@@ -1,8 +1,8 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .card {
-
-  padding: 2px 6.25% 24px 6.25%;
+  padding: 11px 6.25% 24px 6.25%;
   border-bottom: 1px solid $color-gray-200;
   display: grid;
   grid-template-columns: 140fr 76fr 64fr;
@@ -58,18 +58,13 @@
 
   grid-area: title;
 
-  font-family: $font-accent;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-
+  @include typography(16px, 20px, 400, $font-accent);
   text-transform: uppercase;
 
-  margin: 10px 0 0 0;
+  margin: 2px 0 0 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
+    @include typography(20px, 24px, 400, $font-accent);
 
     text-align: center;
     margin-top: 35px;
@@ -78,7 +73,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    line-height: 23px;
+    @include typography(20px, 23px, 400, $font-accent);
+
     margin-top: 42px;
     margin-bottom: 24px;
   }
@@ -87,18 +83,17 @@
 .card__params {
   grid-area: specification;
   color: $color-gray-700;
-  font-size: 12px;
-  line-height: 15px;
+
+  @include typography(12px, 15px, 400, $font-body);
 
   margin-top: 13px;
-  margin-bottom: 23px;
+  margin-bottom: 9px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
     margin-bottom: 26.5px;
 
-    font-size: 16px;
-    line-height: 16px;
+    @include typography(16px, 16px, 400, $font-body);
   }
 }
 
@@ -117,13 +112,14 @@
 .card__button {
   grid-area: order-button;
 
-  font-size: 16px;
-  line-height: 20px;
+  @include typography(16px, 20px, 400, $font-accent);
   padding: 10px 0;
+  margin-top: 13px;
 
   @media (min-width: $tablet-width) {
     margin-left: 3px;
     margin-right: 1px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {

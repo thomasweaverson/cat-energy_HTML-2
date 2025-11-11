@@ -70,6 +70,46 @@
   }
 }
 
+.field-group__heading--contact {
+  @include title-with-line(
+    24px,
+    26px,
+    35px,
+    0,
+    6.25vw,
+    14px,
+    16px
+  );
+
+  @media (min-width: $tablet-width) {
+    br {
+      display: none;
+    }
+
+    @include title-with-line(
+    36px,
+    36px,
+    76px,
+    3.91vw,
+    5.19vw,
+    40px,
+    23px
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title-with-line(
+    36px,
+    36px,
+    76px,
+    4.86vw,
+    2.78vw,
+    40px,
+    23px
+    );
+  }
+}
+
 .field-group__heading--additional {
   @media (min-width: $tablet-width) {
     @include title-with-line(
@@ -173,9 +213,17 @@
     margin-bottom: 12.5px;
   }
 
+  &:last-child {
+    margin-top: -1px;
+  }
+
   @media (min-width: $tablet-width) {
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-top: 0;
     }
   }
 }

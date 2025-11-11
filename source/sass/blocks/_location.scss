@@ -1,11 +1,13 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .location {
   position: relative;
+  background-color: $color-gray-100;
+}
 
-  @media (min-width: $desktop-width) {
-    height: 400px;
-  }
+.location--index {
+  background-color: $color-white;
 }
 
 .location__container {
@@ -28,7 +30,7 @@
   gap: 2px;
 
   padding-top: 27px;
-  padding-bottom: 26px;
+  padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
@@ -41,7 +43,7 @@
     left: 0;
     background-color: $color-white;
     width: 565px;
-    padding: 61px 80px 61px 80px;
+    padding: 61px 80px 59px 80px;
   }
 }
 
@@ -49,26 +51,22 @@
   margin: 0;
   flex: 1 1 0%;
 
-  font-family: $font-accent;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  @include typography(16px, 20px, 400, $font-accent);
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 26px;
+    @include typography(20px, 26px, 400, $font-accent);
   }
 }
 
 .location__address {
   flex: 1 1 0%;
 
-  line-height: 20px;
-  font-weight: 400;
+  @include typography(14px, 20px, 400, $font-body);
   font-style: normal;
 
   @media (min-width: $tablet-width) {
+    @include typography(16px, 20px, 400, $font-body);
     text-align: right;
   }
 
@@ -84,28 +82,13 @@
     display: inline-block;
     margin-bottom: 20px;
 
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: -3px;
-    margin-right: -5px;
+    margin-top: -6px;
+    margin-right: 0;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 16px;
-    line-height: 20px;
+    margin-top: -4px;
     margin-bottom: 19px;
-  }
-}
-
-.location__city {
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
@@ -121,12 +104,4 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
-}
-
-.location--catalog {
-  background-color: $color-gray-100;
-}
-
-.location--form {
-  background-color: $color-gray-100;
 }

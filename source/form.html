@@ -59,7 +59,7 @@
         <h2 class="visually-hidden">Форма подбора программы</h2>
 
         <form class="form__body" method="post" action="https://echo.htmlacademy.ru">
-          <div class="form__fieldset-group">
+          <div class="form__group">
             <fieldset class="form__section form__section--info field-group field-group--info">
               <legend class="visually-hidden">Информация о коте</legend>
 
@@ -76,14 +76,15 @@
                     <span class="field__name">
                       Вес (кг):*
                     </span>
-                    <input class="field__input" name="cat-weight" type="text" placeholder="7" required>
+                    <input class="field__input" name="cat-weight" type="number" placeholder="7" required min="1"
+                      step="0.1" max="12">
                   </label>
                 </li>
 
                 <li class="field-group__item">
                   <label class="field field--cat-age">
                     <span class="field__name">Возраст (лет):</span>
-                    <input class="field__input" name="cat-age" type="text" placeholder="7">
+                    <input class="field__input" name="cat-age" type="number" min="0.5" max="20" step="0.5"  placeholder="7">
                   </label>
                 </li>
               </ul>
@@ -116,9 +117,10 @@
             </fieldset>
           </div>
 
-          <fieldset class="form__section field-group">
+          <fieldset class="form__section field-group" aria-labelledby="contact-info-label">
+            <legend class="visually-hidden">Контактные данные владельца кота</legend>
             <div class="field-group__heading-wrapper">
-              <legend class="field-group__heading">Контактные данные&nbsp;<br> (владельца кота)</legend>
+              <h3 class="field-group__heading field-group__heading--contact" id="contact-info-label">Контактные данные&nbsp;<br> (владельца кота)</h3>
             </div>
 
             <ul class="field-group__list field-group__list--contact">
@@ -126,7 +128,9 @@
                 <label class="field field--e-mail">
                   <span class="field__name">E-mail:*</span>
                   <input class="field__input" name="e-mail" type="email" placeholder="kuklachev@gmail.com" required>
-                  <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <title>Иконка электронной почты</title>
                     <use xlink:href="./img/sprite.svg#mail"></use>
                   </svg>
                 </label>
@@ -135,7 +139,9 @@
                 <label class="field field--phone">
                   <span class="field__name">Телефон:*</span>
                   <input class="field__input" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <title>Иконка телефона</title>
                     <use xlink:href="./img/sprite.svg#phone"></use>
                   </svg>
                 </label>
@@ -143,9 +149,10 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__section field-group">
+          <fieldset class="form__section field-group" aria-labelledby="comment-label">
+            <legend class="visually-hidden">Комментарий</legend>
             <div class="field-group__heading-wrapper">
-              <legend class="field-group__heading">Комментарий</legend>
+              <h3 class="field-group__heading" id="comment-label">Комментарий</h3>
             </div>
 
             <label class="field field--comment">
@@ -155,9 +162,10 @@
             </label>
           </fieldset>
 
-          <fieldset class="form__section field-group field-group--additional">
+          <fieldset class="form__section field-group field-group--additional" aria-labelledby="additional-label">
+            <legend class="visually-hidden">Дополнительно</legend>
             <div class="field-group__heading-wrapper">
-              <legend class="field-group__heading field-group__heading--additional">Дополнительно</legend>
+              <h3 class="field-group__heading field-group__heading--additional" id="additional-label">Дополнительно</h3>
             </div>
 
             <ul class="field-group__list field-group__list--additional">
@@ -196,7 +204,7 @@
       </section>
     </main>
 
-    <section class="page__location location location--form">
+    <section class="page__location location">
       <div class="location__container">
         <h2 class="visually-hidden">Местоположение</h2>
         <div class="location__content">
@@ -219,7 +227,7 @@
 
     <footer class="page__footer page-footer">
       <div class="page-footer__layout">
-        <a class="page-footer__logo logo">
+        <a class="page-footer__logo logo logo--footer">
           <img class="logo__sign logo__sign--footer" src="./img/logo-sign.svg" width="130" height="26" alt="Cat Energy">
         </a>
 

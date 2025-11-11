@@ -1,11 +1,7 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .page-main__header {
-  font-family: $font-accent;
-  font-size: 36px;
-  line-height: 1;
-  font-weight: 400;
-  color: $color-black;
   padding-top: 23px;
   margin-bottom: 20px;
 
@@ -22,7 +18,6 @@
 
 .page-main__header--catalog {
   padding: 0;
-  height: auto;
 
   margin-bottom: 8px;
 
@@ -37,7 +32,6 @@
 
 .page-main__header--form {
   padding: 0;
-  height: auto;
 
   margin-bottom: 39px;
 
@@ -70,17 +64,14 @@
 }
 
 .page-main__title {
-  font-family: $font-accent;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 1;
+  @include typography(36px, 36px, 400, $font-accent);
   padding-top: 26px;
   padding-bottom: 41px;
   padding-left: 6.25%;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 60px;
+    @include typography(60px, 60px, 400, $font-accent);
     padding-left: 3.91%;
     padding-top: 0;
     padding-bottom: 0;
@@ -106,15 +97,12 @@
 }
 
 .page-main__subtitle {
-  font-family: $font-accent;
+  @include typography(14px, 18px, 400, $font-accent);
   color: $color-black;
-  font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
+    @include typography(20px, 30px, 400, $font-accent);
   }
 }

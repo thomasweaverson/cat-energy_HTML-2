@@ -1,5 +1,5 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .how-it-works {
   margin-bottom: 49px;
@@ -34,17 +34,13 @@
 }
 
 .how-it-works__title {
-  font-family: $font-accent;
+  @include typography(36px, 40px, 400, $font-accent);
   color: $color-black;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
   margin: 0;
   margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
+    @include typography(60px, 60px, 400, $font-accent);
     margin-bottom: 32px;
   }
 
@@ -83,13 +79,13 @@
 }
 
 .how-it-works__item {
+  @include typography(14px, 19px, 400, $font-body);
+
   padding-left: 80px;
   min-height: 60px;
   position: relative;
 
   counter-increment: step;
-
-  line-height: 19px;
 
   &::before {
     content: "";
@@ -108,8 +104,7 @@
     padding-bottom: 57px;
     padding-left: 0;
 
-    font-size: 16px;
-    line-height: 24px;
+    @include typography(16px, 24px, 400, $font-body);
 
     &:nth-child(1) {
       &::after {
@@ -134,9 +129,7 @@
       top: 40px;
       right: 4px;
 
-      font-family: $font-accent;
-      font-size: 280px;
-      line-height: 280px;
+      @include typography(280px, 280px, 400, $font-accent);
       color: $color-gray-100;
 
       z-index: -1;

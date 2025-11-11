@@ -26,8 +26,6 @@
   top: 55px;
   left: 0;
   width: 100vw;
-  background-color: $color-white;
-  padding: 0;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -42,7 +40,6 @@
     justify-self: end;
     align-self: center;
     width: auto;
-    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
@@ -66,12 +63,12 @@
 
 .page-header__toggler {
   grid-column: 3 / 4;
-  width: 24px;
-  height: 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
+  width: 24px;
+  height: 20px;
   padding: 0;
   align-self: center;
 
@@ -118,7 +115,6 @@
 
 .page-header__toggler--opened {
   position: relative;
-
 
   .page-header__toggler-line {
 

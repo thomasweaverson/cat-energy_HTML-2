@@ -1,4 +1,5 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .switcher {
   display: grid;
@@ -14,16 +15,14 @@
   height: 30px;
   padding: 0;
 
-  font-family: $font-accent;
-  font-size: 16px;
-  line-height: 20px;
+  @include typography(16px, 20px, 400, $font-accent);
   color: $color-black;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     height: 40px;
-    font-size: 20px;
-    line-height: 30px;
+
+    @include typography(20px, 30px, 400, $font-accent);
   }
 }
 

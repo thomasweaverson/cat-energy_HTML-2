@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
-    margin-bottom: 66px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,15 +52,13 @@
 }
 
 .products__show-more {
-  padding-inline: 6.25%;
-  padding-block: 17px 24px;
+  padding: 17px 6.25% 24px 6.25%;
 
   @media (min-width: $tablet-width) {
-
     margin-top: 82px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 80px;
+    margin-top: 81px;
   }
 }

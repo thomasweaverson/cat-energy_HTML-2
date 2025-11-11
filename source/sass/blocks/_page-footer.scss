@@ -1,5 +1,4 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
 
 .page-footer {
   background-color: $color-gray-100;
@@ -8,12 +7,12 @@
 .page-footer__layout {
   width: 87.5%;
   margin: 0 auto;
-  padding: 25px 0 22px 0;
+  padding: 26px 0 22px 0;
 
   @media (min-width: $tablet-width) {
     width: 92.19%;
 
-    padding: 50px 0 52px 0;
+    padding: 47px 0 52px 0;
     display: grid;
     grid-template-columns: 165px 1fr 165px;
   }
@@ -36,10 +35,6 @@
 
     align-self: center;
     text-align: left;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 2px 0 0 1px;
   }
 }
 

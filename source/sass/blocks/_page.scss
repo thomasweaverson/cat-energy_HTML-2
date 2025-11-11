@@ -1,9 +1,8 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .page {
-  font-family: $font-body;
-  font-size: 14px;
-  line-height: 18px;
+  @include typography(14px, 18px, 400, $font-body);
   color: $color-black;
   background-color: $color-white;
   height: 100%;
@@ -28,7 +27,7 @@
   grid-area: header;
 
   @media (min-width: $tablet-width) {
-    margin-block: 26px 62px;
+    margin-block: 26px 63px;
   }
 
   @media (min-width: $desktop-width) {

@@ -1,4 +1,5 @@
 @use "../utils/variables.scss" as *;
+@use "../utils/mixins.scss" as *;
 
 .card-additional {
   @media (min-width: $tablet-width) {
@@ -14,16 +15,13 @@
 .card-additional__name {
   color: $color-gray-800;
 
-  font-family: $font-accent;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 400;
+  @include typography(16px, 16px, 400, $font-accent);
   text-transform: uppercase;
 
   margin: 0 0 13px 1px;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
+    @include typography(20px, 20px, 400, $font-accent);
     margin-bottom: 24px;
   }
 
@@ -36,7 +34,8 @@
 .card-additional__specification {
   color: $color-gray-700;
 
-  line-height: 1;
+  @include typography(14px, 14px, 400, $font-body);
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -59,25 +58,24 @@
 
   @media (min-width: $tablet-width) {
     justify-self: end;
-    font-size: 16px;
-    line-height: 22px;
+
+    @include typography(16px, 22px, 400, $font-body);
   }
 
   @media (min-width: $desktop-width) {
     justify-self: start;
-    // margin-left: 9px;
   }
 }
 
 .card-additional__button {
-  font-size: 16px;
-  line-height: 20px;
+  @include typography(16px, 20px, 400, $font-accent);
   padding-bottom: 9px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
-    font-size: 16px;
-    line-height: 26px;
+
+    @include typography(16px, 26px, 400, $font-accent);
+
     padding-block: 7px;
     margin-left: -1px;
     margin-right: -1px;
