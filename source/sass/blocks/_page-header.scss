@@ -13,6 +13,12 @@
   }
 }
 
+.page-header__nav--nojs {
+  @media (max-width: $mobile-width-only) {
+    grid-template-columns: 6.25vw 87.5vw 6.25vw;
+  }
+}
+
 .page-header__logo {
   grid-column: 2 / 3;
 }
@@ -21,6 +27,7 @@
   position: absolute;
   top: 55px;
   left: 0;
+  z-index: 2;
 
   display: none;
 

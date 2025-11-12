@@ -164,6 +164,14 @@
     margin-bottom: 19.5px;
   }
 
+  @media (min-width: 350px) {
+    &--slim {
+      br {
+        display: none;
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
     @include typography(16px, 24px, 400, $font-body);
     padding: 0;
@@ -173,12 +181,6 @@
 
     &::after {
       display: none;
-    }
-
-    &--slim {
-      br {
-        display: none;
-      }
     }
   }
 

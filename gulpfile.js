@@ -14,7 +14,7 @@ import webp from 'gulp-webp';
 import csso from 'postcss-csso';
 import imagemin from 'gulp-imagemin';
 
-//ready Styles
+// Styles
 
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -29,7 +29,7 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-//Ready HTML
+// HTML
 
 const html = () => {
   return gulp.src("source/*.html")
@@ -39,7 +39,7 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 
-//Ready Scripts
+// Scripts
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
@@ -49,7 +49,7 @@ const scripts = () => {
     .pipe(browser.stream());
 }
 
-//Ready Images
+// Images
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -62,7 +62,7 @@ const optimizeImages = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-//Ready WebP
+// WebP
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -70,7 +70,7 @@ const createWebp = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-//Ready Sprite
+// Sprite
 
 const sprite = () => {
   return gulp.src("source/img/icons-sprite/*.svg")
@@ -81,7 +81,7 @@ const sprite = () => {
     .pipe(gulp.dest("build/img"));
 }
 
-//Ready Copy
+// Copy
 
 const copy = (done) => {
   gulp.src([
@@ -97,11 +97,11 @@ const copy = (done) => {
   done();
 }
 
-//Ready Clean
+// Clean
 const clean = () => deleteAsync("build");
 
 
-//Ready Server
+// Server
 
 const server = (done) => {
   browser.init({
@@ -116,7 +116,7 @@ const server = (done) => {
   done();
 }
 
-//Ready Reload
+// Reload
 
 const reload = (done) => {
   browser.reload();
@@ -131,7 +131,7 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-//! Build
+// Build
 
 export const build = gulp.series(
   clean,
@@ -146,7 +146,7 @@ export const build = gulp.series(
   )
 );
 
-//Ready Default
+// Default
 
 export default gulp.series(
   clean,

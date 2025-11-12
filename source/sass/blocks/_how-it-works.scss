@@ -81,6 +81,9 @@
 
 .how-it-works__item {
   @include typography(14px, 19px, 400, $font-body);
+  display: flex;
+  align-items: center;
+
   position: relative;
 
   min-height: 60px;
@@ -104,6 +107,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: block;
+
     width: 250px;
     padding-top: 40px;
     padding-bottom: 57px;
@@ -220,4 +225,8 @@
       right: -3px;
     }
   }
+}
+
+.how-it-works__text {
+  margin: 0;
 }

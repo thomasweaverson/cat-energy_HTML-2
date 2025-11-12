@@ -29,4 +29,14 @@
       color: $color-gray-700;
     }
   }
+
+  @media (min-width: 360px) {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    gap: 0;
+  }
 }

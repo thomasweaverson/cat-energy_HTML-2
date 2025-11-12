@@ -14,13 +14,14 @@
 }
 
 .products-additional__layout {
+  @media (min-width: $tablet-width) {
+    margin: 0 3.91% 0 3.91%;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 79px;
-  }
-
-  @media (min-width: $desktop-width) {
     margin: 0 7.64% 0 7.64%;
   }
 }
@@ -72,13 +73,15 @@
   padding-right: 6.25%;
 
   @media (min-width: $tablet-width) {
-    margin: 0 3.91% 69px 3.91%;
+    max-width: 900px;
+    margin: 0 auto 69px auto;
     padding: 0;
 
     border: 1px solid $color-gray-500;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 100%;
     margin: 0;
     border-left: none;
     border-right: none;

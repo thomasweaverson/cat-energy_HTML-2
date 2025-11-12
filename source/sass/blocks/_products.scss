@@ -1,5 +1,4 @@
 @use "../utils/variables.scss" as *;
-// @use "../utils/mixins.scss" as *;
 
 .products {
   margin-bottom: 25px;
@@ -21,7 +20,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-inline: 7.64%;
+    padding-inline: 7.63%;
   }
 }
 

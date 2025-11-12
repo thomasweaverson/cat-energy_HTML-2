@@ -2,6 +2,8 @@
 @use "../utils/mixins.scss" as *;
 
 .card {
+  position: relative;
+
   display: grid;
 
   padding: 11px 6.25% 24px 6.25%;
@@ -34,27 +36,6 @@
   }
 }
 
-.card__image-wrapper {
-  grid-area: image;
-  align-self: center;
-  justify-self: center;
-}
-
-.card__image {
-  display: block;
-  object-fit: cover;
-
-  @media (min-width: $tablet-width) {
-    width: 168px;
-    height: 200px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 172px;
-    height: 196px;
-  }
-}
-
 .card__heading {
   margin: 2px 0 0 0;
 
@@ -77,6 +58,46 @@
 
     margin-top: 42px;
     margin-bottom: 24px;
+  }
+}
+
+.card__link {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6.25vw;
+    right: 6.25vw;
+    bottom: 80px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      right: 30px;
+      left: 30px;
+      bottom: 90px;
+    }
+  }
+}
+
+.card__image-wrapper {
+  grid-area: image;
+  align-self: center;
+  justify-self: center;
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 196px;
   }
 }
 
@@ -137,5 +158,12 @@
 .card__break-wide {
   @media (max-width: $mobile-width-only) {
     display: none;
+  }
+}
+
+.card .card__container .card__wrapper div svg {
+  @media (min-width: $tablet-width) {
+    width: 35px;
+    height: 20px;
   }
 }

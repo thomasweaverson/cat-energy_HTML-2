@@ -3,15 +3,8 @@
     "at-rule-no-unknown": [true, {
       "ignoreAtRules": [
         "use",
-        "forward",
         "include",
-        "mixin",
-        "function",
-        "if",
-        "else",
-        "each",
-        "for",
-        "while"
+        "mixin"
       ]
     }]
   }

@@ -33,8 +33,11 @@
   padding-top: 27px;
   padding-bottom: 25px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 360px) {
     justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
 
     padding: 60px 0;
   }
@@ -70,9 +73,12 @@
   @include typography(14px, 20px, 400, $font-body);
   font-style: normal;
 
+  @media (min-width: 360px) {
+    text-align: right;
+  }
+
   @media (min-width: $tablet-width) {
     @include typography(16px, 20px, 400, $font-body);
-    text-align: right;
   }
 
   @media (min-width: $desktop-width) {
