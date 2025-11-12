@@ -2,9 +2,10 @@
 @use "../utils/mixins.scss" as *;
 
 .card {
+  display: grid;
+
   padding: 11px 6.25% 24px 6.25%;
   border-bottom: 1px solid $color-gray-200;
-  display: grid;
   grid-template-columns: 140fr 76fr 64fr;
   grid-template-areas:
     "image title ."
@@ -13,6 +14,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 8px 36px 39px 36px;
+
+    background: linear-gradient(to bottom, transparent 81px, $color-gray-100 81px);
     grid-template-columns: 1fr;
     grid-template-rows: 200px repeat(3, auto);
     grid-template-areas:
@@ -22,8 +25,6 @@
       "order-button";
 
     border-bottom: none;
-
-    background: linear-gradient(to bottom, transparent 81px, $color-gray-100 81px);
   }
 
   @media (min-width: $desktop-width) {
@@ -40,8 +41,8 @@
 }
 
 .card__image {
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     width: 168px;
@@ -55,13 +56,12 @@
 }
 
 .card__heading {
+  margin: 2px 0 0 0;
 
   grid-area: title;
-
-  @include typography(16px, 20px, 400, $font-accent);
   text-transform: uppercase;
 
-  margin: 2px 0 0 0;
+  @include typography(16px, 20px, 400, $font-accent);
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 24px, 400, $font-accent);
@@ -81,13 +81,13 @@
 }
 
 .card__params {
-  grid-area: specification;
   color: $color-gray-700;
-
-  @include typography(12px, 15px, 400, $font-body);
+  grid-area: specification;
 
   margin-top: 13px;
   margin-bottom: 9px;
+
+  @include typography(12px, 15px, 400, $font-body);
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -110,11 +110,11 @@
 }
 
 .card__button {
+  padding: 10px 0;
   grid-area: order-button;
+  margin-top: 13px;
 
   @include typography(16px, 20px, 400, $font-accent);
-  padding: 10px 0;
-  margin-top: 13px;
 
   @media (min-width: $tablet-width) {
     margin-left: 3px;

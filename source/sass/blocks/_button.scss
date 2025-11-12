@@ -4,17 +4,21 @@
 .button {
   display: block;
 
-  @include typography(14px, 18px, 400, $font-accent);
+  padding: 11px 0;
+
+  text-align: center;
 
   color: $color-white;
-  text-align: center;
-  text-transform: uppercase;
+
   background-color: $color-green;
   border: none;
+
   cursor: pointer;
+  text-transform: uppercase;
 
   text-decoration: none;
-  padding: 11px 0;
+
+  @include typography(14px, 18px, 400, $font-accent);
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 20px, 400, $font-accent);
@@ -27,12 +31,14 @@
 }
 
 .button:active {
-  background-color: $color-green-hover;
   color: rgba($color-white, 0.3);
+
+  background-color: $color-green-hover;
 }
 
 .button--secondary {
   color: $color-gray-700;
+
   background-color: $color-gray-100;
 
   &:hover {
@@ -40,7 +46,8 @@
   }
 
   &:active {
-    background-color: $color-gray-200;
     color: rgba($color-gray-700, 0.3);
+
+    background-color: $color-gray-200;
   }
 }

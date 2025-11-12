@@ -3,17 +3,15 @@
 
 .copyright {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   color: $color-gray-600;
 
-  &:hover {
-    color: $color-green;
-
-    & .copyright__text {
-      color: $color-gray-700;
-    }
+  &__text {
+    @include typography(16px, 16px, 400, $font-body);
+    color: $color-gray-700;
+    margin-left: -1px;
   }
 
   &:active {
@@ -23,10 +21,12 @@
       color: rgba($color-gray-700, 0.3);
     }
   }
-}
 
-.copyright__text {
-  @include typography(16px, 16px, 400, $font-body);
-  color: $color-gray-700;
-  margin-left: -1px;
+  &:hover {
+    color: $color-green;
+
+    & .copyright__text {
+      color: $color-gray-700;
+    }
+  }
 }

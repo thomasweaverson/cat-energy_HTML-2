@@ -5,10 +5,12 @@
   border-bottom: 1px solid $color-gray-200;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 36px 35px 36px;
-    width: 324px;
-    border: 2px solid $color-gray-100;
     position: relative;
+
+    width: 324px;
+    padding: 50px 36px 35px 36px;
+
+    border: 2px solid $color-gray-100;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,20 +22,24 @@
 
 .show-more__plus {
   position: relative;
+
   width: 30px;
   height: 30px;
   margin: 0 auto 23px auto;
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
-    background-color: #d3d3d3;
     top: 50%;
     left: 50%;
+
     width: 2px;
     height: 100%;
+
+    background-color: #d3d3d3;
+
     transform: translate(-50%, -50%);
+    content: "";
   }
 
   &::after {
@@ -54,9 +60,10 @@
 
 .show-more__heading {
   @include typography(16px, 20px, 400, $font-accent);
-  text-transform: uppercase;
-  text-align: center;
   margin: 0 0 8px 0;
+
+  text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 22px, 400, $font-accent);
@@ -65,13 +72,12 @@
 }
 
 .show-more__description {
+  margin: 0 0 21px 0;
+
+  text-align: center;
   color: $color-gray-700;
 
   @include typography(12px, 16px, 400, $font-body);
-
-  text-align: center;
-
-  margin: 0 0 21px 0;
 
   @media (min-width: $tablet-width) {
     @include typography(16px, 18px, 400, $font-body);
@@ -87,17 +93,18 @@
 
   @media (min-width: $tablet-width) {
     @include typography(16px, 16px, 400, $font-accent);
-    padding: 12px 0;
 
     position: static;
 
+    padding: 12px 0;
+
     &::after {
-      content: "";
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
+      content: "";
     }
   }
 }

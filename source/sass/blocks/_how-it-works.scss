@@ -2,23 +2,23 @@
 @use "../utils/mixins.scss" as *;
 
 .how-it-works {
-  margin-bottom: 49px;
   width: 87.5%;
+  margin-bottom: 49px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
     margin-bottom: 42px;
     padding-bottom: 46px;
     border-bottom: 1px solid $color-gray-300;
-    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
+    width: 84.72%;
     margin-bottom: 25px;
     padding-bottom: 0;
     border-bottom: none;
-    width: 84.72%;
   }
 }
 
@@ -35,8 +35,9 @@
 
 .how-it-works__title {
   @include typography(36px, 40px, 400, $font-accent);
-  color: $color-black;
   margin: 0;
+
+  color: $color-black;
   margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
@@ -50,13 +51,13 @@
 }
 
 .how-it-works__list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
   list-style: none;
   counter-reset: step;
-
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 
   @media (min-width: $tablet-width) {
@@ -67,35 +68,39 @@
 
   @media (min-width: $tablet-plus-width) {
     flex-wrap: nowrap;
-    gap: 0;
     justify-content: space-between;
+    gap: 0;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 20px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    gap: 20px;
   }
 }
 
 .how-it-works__item {
   @include typography(14px, 19px, 400, $font-body);
+  position: relative;
+
+  min-height: 60px;
 
   padding-left: 80px;
-  min-height: 60px;
-  position: relative;
 
   counter-increment: step;
 
   &::before {
-    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: block;
+
     width: 60px;
     height: 60px;
-    position: absolute;
-    left: 0;
-    top: 0;
+
     background-color: $color-green;
+    content: "";
   }
 
   @media (min-width: $tablet-width) {
@@ -106,6 +111,30 @@
 
     @include typography(16px, 24px, 400, $font-body);
 
+    &::before {
+      position: static;
+
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 40px;
+      right: 4px;
+
+      z-index: -1;
+
+      color: $color-gray-100;
+
+      transform: translateY(-40px);
+      content: counter(step);
+      pointer-events: none;
+
+      @include typography(280px, 280px, 400, $font-accent);
+    }
+
     &:nth-child(1) {
       &::after {
         right: 25px;
@@ -114,27 +143,6 @@
           right: 20px;
         }
       }
-    }
-
-    &::before {
-      position: static;
-      margin-bottom: 31px;
-      width: 80px;
-      height: 80px;
-    }
-
-    &::after {
-      content: counter(step);
-      position: absolute;
-      top: 40px;
-      right: 4px;
-
-      @include typography(280px, 280px, 400, $font-accent);
-      color: $color-gray-100;
-
-      z-index: -1;
-      transform: translateY(-40px);
-      pointer-events: none;
     }
   }
 

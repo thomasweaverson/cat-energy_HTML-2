@@ -9,9 +9,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 7.71% 69px 7.71%;
-
     display: grid;
+
+    margin: 0 7.71% 69px 7.71%;
     grid-template-columns: 570fr 569fr;
     gap: 81px;
   }
@@ -36,12 +36,12 @@
 }
 
 .form__section--goal {
-  margin-inline: -6.25vw;
   padding: 22px 6.25vw 18px 6.25vw;
+  margin-inline: -6.25vw;
 
   @media (min-width: $tablet-width) {
-    margin-inline: 1px -3px;
     padding: 24px 27px;
+    margin-inline: 1px -3px;
   }
 }
 
@@ -49,8 +49,9 @@
   margin: 0 6.25% 32px 6.25%;
 
   @media (min-width: $tablet-width) {
-    margin: 0 9.11% 72px 9.11%;
     display: grid;
+
+    margin: 0 9.11% 72px 9.11%;
     grid-template-columns: repeat(2, 312px);
     gap: 32px;
   }
@@ -69,20 +70,21 @@
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
     width: 282px;
+    margin-bottom: 0;
 
     @include typography(20px, 20px, 400, $font-accent);
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 3;
     width: 568px;
+    grid-column: 1 / 3;
   }
 }
 
 .form__note {
   margin: 0;
+
   text-align: center;
 
   @include typography(14px, 16px, 400, $font-body);

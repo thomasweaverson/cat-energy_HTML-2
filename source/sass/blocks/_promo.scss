@@ -18,16 +18,17 @@
 
 .promo__title {
   @include typography(36px, 36px, 400, $font-accent);
-  text-align: center;
 
   margin: 0;
+
+  text-align: center;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     @include typography(60px, 60px, 400, $font-accent);
-    margin-bottom: 43px;
-    color: $color-black;
     text-align: left;
+    color: $color-black;
+    margin-bottom: 43px;
 
     grid-row: 1 / 2;
     grid-column: 2 / 3;
@@ -44,21 +45,22 @@
 
 .promo__motto {
   @include typography(14px, 14px, 400, $font-accent);
-  text-align: center;
-  text-transform: uppercase;
 
   margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
   margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    color: $color-black;
     text-align: left;
+    color: $color-black;
     margin-left: 2px;
     margin-bottom: 19px;
-
-    @include typography(20px, 20px, 400, $font-accent);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    @include typography(20px, 20px, 400, $font-accent);
   }
 
   @media (min-width: $desktop-width) {
@@ -69,19 +71,19 @@
 
 .promo__image {
   display: block;
+
   margin: 0 auto;
   margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
-
     width: 709px;
     height: 609px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
     width: 552px;
     height: 499px;
+    margin-top: 0;
   }
 }
 
@@ -101,11 +103,11 @@
 
 .promo__button {
   display: block;
+
   width: 87.5%;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-
     width: 244px;
     margin: 0;
     margin-left: 3px;

@@ -3,21 +3,63 @@
 
 .field {
   color: $color-gray-700;
+  text-transform: uppercase;
 
   @include typography(16px, 18px, 400, $font-accent);
-  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 30px, 400, $font-accent);
   }
-}
 
-.field--error {
-  & .field__input {
-    border-color: $color-error;
+  &__textarea {
+    display: block;
 
-    & + svg {
-      color: $color-error;
+    padding: 9px 13px 14px;
+    resize: none;
+    margin-top: 38px;
+    border-color: $color-gray-300;
+
+    @media (min-width: $tablet-width) {
+      height: 175px;
+      padding: 9px 18px 14px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    @include typography(16px, 18px, 400, $font-accent);
+    width: 100%;
+    padding: 9.5px 15px;
+
+    border: 1px solid #e7e7e7;
+    text-transform: uppercase;
+
+    &::placeholder {
+      color: $color-gray-700;
+    }
+
+    &:hover {
+      border-color: $color-gray-500;
+    }
+
+    &:focus {
+      border-color: $color-gray-700;
+      outline: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      @include typography(20px, 30px, 400, $font-accent);
+      padding: 10px 17px;
+    }
+  }
+
+  &__input[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      appearance: none;
     }
   }
 }
@@ -35,42 +77,46 @@
     }
   }
 
-  & .field__name {
-    margin-right: 14px;
+  .field__name {
     align-self: center;
+    margin-right: 14px;
 
     @media (min-width: $tablet-width) {
       margin-right: 19px;
     }
   }
 
-  & .field__input {
+  .field__input {
     flex: 1;
+
     min-width: 0;
   }
 }
 
 .field--e-mail,
 .field--phone {
-  display: flex;
   position: relative;
 
-  & .field__name {
-    margin-right: 9px;
+  display: flex;
+
+  .field__name {
     align-self: center;
+    margin-right: 9px;
   }
 
-  & .field__input {
+  .field__input {
     flex: 1;
+
     min-width: 0;
     padding-left: 18px;
   }
 
-  & svg {
+  svg {
     position: absolute;
     top: 52%;
-    transform: translateY(-50%);
     right: 14px;
+
+    transform: translateY(-50%);
 
     @media (min-width: $tablet-width) {
       right: 19px;
@@ -94,6 +140,10 @@
       padding-left: 20px;
     }
   }
+
+  svg {
+    color: $color-gray-800;
+  }
 }
 
 .field--phone {
@@ -112,95 +162,34 @@
       padding-left: 19px;
     }
   }
-}
 
-.field--e-mail svg {
-  color: $color-gray-800;
-}
-
-.field--phone svg {
   @media (min-width: $desktop-width) {
-    right: 17px;
+    svg {
+      right: 17px;
+    }
   }
 }
 
 .field--comment {
   display: block;
-  margin: 0 6.25vw 21px 6.25vw;
+
+  margin: 0 6.25vw 21px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 9.11% 63px 9.11%;
+    margin: 0 9.11% 63px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 7.64% 67px 7.64%;
+    margin: 0 7.64% 67px;
   }
 }
 
-.field__input {
-  @include typography(16px, 18px, 400, $font-accent);
-  text-transform: uppercase;
+.field--error {
+  .field__input {
+    border-color: $color-error;
 
-  border: 1px solid #e7e7e7;
-  padding: 9.5px 15px;
-
-  &::placeholder {
-    color: $color-gray-700;
+    & + svg {
+      color: $color-error;
+    }
   }
-
-  @media (min-width: $tablet-width) {
-    @include typography(20px, 30px, 400, $font-accent);
-    padding: 10px 17px;
-  }
-
-  &:hover {
-    border: 1px solid $color-gray-500;
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid $color-gray-700;
-  }
-
-  &:focus + svg {
-    color: $color-green;
-  }
-}
-
-.field__textarea {
-  display: block;
-  margin: 38px 0 0 0;
-  padding: 9px 13px 14px;
-  border: 1px solid $color-gray-300;
-  width: 100%;
-  resize: none;
-
-  @include typography(16px, 18px, 400, $font-accent);
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    @include typography(20px, 30px, 400, $font-accent);
-
-    height: 175px;
-    padding: 9px 18px 14px 18px;
-  }
-
-  &:hover {
-    border: 1px solid $color-gray-500;
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid $color-gray-700;
-  }
-}
-
-.field__input[type="number"] {
-  appearance: textfield;
-}
-
-.field__input[type="number"]::-webkit-outer-spin-button,
-.field__input[type="number"]::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }

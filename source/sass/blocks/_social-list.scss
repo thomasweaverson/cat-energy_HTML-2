@@ -2,8 +2,8 @@
 
 .social-list {
   display: flex;
-  justify-items: center;
   justify-content: center;
+  justify-items: center;
   gap: 5px;
 
   list-style: none;
@@ -15,8 +15,9 @@
 
 .social-list__link {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   width: 50px;
   height: 50px;
 

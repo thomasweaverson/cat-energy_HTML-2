@@ -13,31 +13,35 @@
   $font-weight: 400,
   $bg-color: $color-white
 ) {
-  font-family: $font-family;
-  font-weight: $font-weight;
+  width: fit-content;
+  margin: 0 auto $margin-bottom $margin-left;
+
   font-size: $font-size;
   line-height: $line-height;
-  margin: 0 auto $margin-bottom $margin-left;
-  width: fit-content;
+
+  background-color: $bg-color;
+  font-family: $font-family;
+  font-weight: $font-weight;
   padding-left: $padding-left;
   padding-right: $padding-right;
-  background-color: $bg-color;
 
   &::before {
-    content: "";
     position: absolute;
-    z-index: -1;
-    width: 100vw;
     top: $line-top;
     left: 0;
+    z-index: -1;
+
+    width: 100vw;
     height: 2px;
+
     background-color: $line-color;
+    content: "";
   }
 }
 
 @mixin typography($font-size: 16px, $line-height: 1, $font-weight: 400, $font-family: $font-accent) {
-  font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
+  font-family: $font-family;
   font-weight: $font-weight;
 }

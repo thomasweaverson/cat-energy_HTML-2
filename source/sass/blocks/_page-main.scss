@@ -7,6 +7,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
+
     padding: 0;
     margin-bottom: -3px;
   }
@@ -65,10 +66,10 @@
 
 .page-main__title {
   @include typography(36px, 36px, 400, $font-accent);
+  margin: 0;
   padding-top: 26px;
   padding-bottom: 41px;
   padding-left: 6.25%;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
     @include typography(60px, 60px, 400, $font-accent);
@@ -98,9 +99,10 @@
 
 .page-main__subtitle {
   @include typography(14px, 18px, 400, $font-accent);
+  margin: 0;
+
   color: $color-black;
   text-transform: uppercase;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 30px, 400, $font-accent);

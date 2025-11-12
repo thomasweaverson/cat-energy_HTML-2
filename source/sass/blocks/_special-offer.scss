@@ -4,17 +4,19 @@
 .special-offer {
   padding: 187px 0 43px 0;
 
+  text-align: center;
+
   color: $color-white;
+
   background-color: $color-green;
   background-image: url("../img/icons/special-offer-gift.svg"),
     url("../img/background/catbag-small.jpg");
 
-  @include typography(16px, 20px, 400, $font-body);
-  text-align: center;
-
   background-repeat: no-repeat;
   background-position: center 59px, center center;
   background-size: auto, cover;
+
+  @include typography(16px, 20px, 400, $font-body);
 
   @media (min-resolution: 2dppx) and (max-width: $mobile-width-only) {
     background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-small@2x.jpg");
@@ -34,6 +36,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 186px 0 43px 0;
+
     background-image: url("../img/icons/special-offer-gift.svg"), url("../img/background/catbag-large.jpg");
     background-position: 84px 56px, center center;
 

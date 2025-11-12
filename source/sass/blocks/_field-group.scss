@@ -137,8 +137,8 @@
 }
 
 .field-group__list {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -152,10 +152,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
     margin-bottom: 46px;
     margin-inline: 7.64%;
-
-    display: flex;
     gap: 80px;
   }
 }
@@ -164,9 +163,8 @@
   margin-inline: 6.25%;
 
   @media (min-width: $tablet-width) {
-    margin-inline: 9.11%;
-
     display: grid;
+    margin-inline: 9.11%;
     grid-template-columns: repeat(2, 312px);
     gap: 32px;
   }

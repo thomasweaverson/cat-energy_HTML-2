@@ -3,6 +3,7 @@
 
 .location {
   position: relative;
+
   background-color: $color-gray-100;
 }
 
@@ -34,6 +35,7 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
+
     padding: 60px 0;
   }
 
@@ -41,18 +43,21 @@
     position: absolute;
     top: 95px;
     left: 0;
-    background-color: $color-white;
+
     width: 565px;
     padding: 61px 80px 59px 80px;
+
+    background-color: $color-white;
   }
 }
 
 .location__invite {
-  margin: 0;
   flex: 1 1 0%;
 
-  @include typography(16px, 20px, 400, $font-accent);
+  margin: 0;
   text-transform: uppercase;
+
+  @include typography(16px, 20px, 400, $font-accent);
 
   @media (min-width: $tablet-width) {
     @include typography(20px, 26px, 400, $font-accent);
@@ -72,8 +77,10 @@
 
   @media (min-width: $desktop-width) {
     flex: 0 1 auto;
-    text-align: left;
+
     width: fit-content;
+
+    text-align: left;
   }
 }
 
@@ -94,12 +101,13 @@
 
 .location__map {
   display: block;
+
   width: 100%;
   height: 362px;
 
-  border: none;
-
   margin: 0;
+
+  border: none;
 
   @media (min-width: $tablet-width) {
     height: 400px;
